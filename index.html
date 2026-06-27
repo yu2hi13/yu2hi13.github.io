@@ -59,7 +59,7 @@
     cursor: default;
     text-decoration: none;
   }
-  .robostream-preview {
+  .project-preview {
     position: relative;
     display: inline-block;
     width: 90%;
@@ -68,18 +68,18 @@
     background: #0b1318;
     box-shadow: 0 8px 22px rgba(11, 31, 42, 0.18);
   }
-  .robostream-preview video {
+  .project-preview img,
+  .project-preview video {
     display: block;
     width: 100%;
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
     transition: transform 0.35s ease, filter 0.35s ease;
   }
-  .robostream-preview:hover video {
+  .project-preview:hover img,
+  .project-preview:hover video {
     transform: scale(1.025);
     filter: saturate(1.08);
   }
-  .robostream-badge,
+  .venue-badge,
   .robostream-demo-label {
     position: absolute;
     z-index: 1;
@@ -90,7 +90,7 @@
     line-height: 1;
     pointer-events: none;
   }
-  .robostream-badge {
+  .venue-badge {
     top: 9px;
     left: 9px;
     padding: 6px 8px;
@@ -229,11 +229,11 @@
 
 
   <tr>
-    <td width="40%" valign="top" align="center"><a class="robostream-preview" href="https://robostream123.github.io/" aria-label="Visit the RoboStream project page">
-    <video playsinline autoplay loop muted preload="metadata" poster="images/RoboStream/Overview.png" aria-hidden="true">
+    <td width="40%" valign="top" align="center"><a class="project-preview" href="https://robostream123.github.io/" aria-label="Visit the RoboStream project page">
+    <video playsinline autoplay loop muted preload="metadata" poster="images/RoboStream/Overview.png" aria-hidden="true" style="aspect-ratio:16/9;object-fit:cover;">
       <source src="images/RoboStream/RoboStream-preview.mp4" type="video/mp4">
     </video>
-    <span class="robostream-badge">ECCV 2026</span>
+    <span class="venue-badge">ECCV 2026</span>
     <span class="robostream-demo-label">▶ ROBOT DEMO</span>
     </a></td>
     <td width="60%" valign="top">
@@ -256,8 +256,9 @@
   </tr>
 
   <tr>
-    <td width="40%" valign="top" align="center"><a href="https://zipvggt.github.io/">
-    <img src="images/zipvggt/Zip-VGGT.png" alt="sym" width="90%" style="padding-top:0px;padding-bottom:0px;border-radius:15px;">
+    <td width="40%" valign="top" align="center"><a class="project-preview" href="https://zipvggt.github.io/" aria-label="Visit the Zip-VGGT project page">
+    <img src="images/zipvggt/Zip-VGGT.png" alt="Zip-VGGT project preview">
+    <span class="venue-badge">PREPRINT</span>
     </a></td>
     <td width="60%" valign="top">
       <p><a href="https://zipvggt.github.io/" id="zipvggt">
@@ -278,8 +279,9 @@
   </tr>
 
   <tr>
-    <td width="40%" valign="top" align="center"><a href="https://dyn-bench.github.io/">
-    <img src="images/dynbench/Dynbench-teaser.png" alt="sym" width="90%" style="padding-top:0px;padding-bottom:0px;border-radius:15px;">
+    <td width="40%" valign="top" align="center"><a class="project-preview" href="https://dyn-bench.github.io/" aria-label="Visit the Dyn-Bench project page">
+    <img src="images/dynbench/Dynbench-teaser.png" alt="Dyn-Bench project preview">
+    <span class="venue-badge">CVPR 2026</span>
     </a></td>
     <td width="60%" valign="top">
       <p><a href="https://dyn-bench.github.io/" id="DynamicBench">
@@ -303,8 +305,9 @@
   </tr>
 
   <tr>
-    <td width="40%" valign="top" align="center"><a href="https://dynamic-verse.github.io/">
-    <video playsinline autoplay loop muted src="images/dynamic_verse/DynamicVerse-preview.mp4" poster="./images/loading-icon.gif" alt="sym" width="90%" style="padding-top:0px;padding-bottom:0px;border-radius:15px;"></video>
+    <td width="40%" valign="top" align="center"><a class="project-preview" href="https://dynamic-verse.github.io/" aria-label="Visit the DynamicVerse project page">
+    <video playsinline autoplay loop muted src="images/dynamic_verse/DynamicVerse-preview.mp4" poster="./images/loading-icon.gif" aria-hidden="true"></video>
+    <span class="venue-badge">NEURIPS 2025</span>
     </a></td>
     <td width="60%" valign="top">
       <p><a href="https://dynamic-verse.github.io/" id="DynamicVerse">
@@ -349,8 +352,9 @@
 
 
   <tr>
-    <td width="40%" valign="top" align="center"><a href="https://tao-25.github.io/">
-    <img src="images/TAO/TAO.png" alt="TAO project" width="90%" style="padding-top:0px;padding-bottom:0px;border-radius:15px;">
+    <td width="40%" valign="top" align="center"><a class="project-preview" href="https://tao-25.github.io/" aria-label="Visit the Track Any Anomalous Object project page">
+    <img src="images/TAO/TAO.png" alt="Track Any Anomalous Object project preview">
+    <span class="venue-badge">CVPR 2025</span>
     </a></td>
     <td width="60%" valign="top">
       <p><a href="https://tao-25.github.io/" id="Tao">
@@ -395,8 +399,9 @@
 
 
   <tr>
-    <td width="40%" valign="top" align="center"><a href="https://a-sa-m.github.io/">
-      <img src="images/ASAM/asam.png" alt="ASAM project" width="90%" style="padding-top:0px;padding-bottom:0px;border-radius:15px;">
+    <td width="40%" valign="top" align="center"><a class="project-preview" href="https://a-sa-m.github.io/" aria-label="Visit the ASAM project page">
+      <img src="images/ASAM/asam.png" alt="ASAM project preview">
+      <span class="venue-badge">NEURIPS 2024</span>
     </a></td>
     <td width="60%" valign="top">
       <p><a href="https://a-sa-m.github.io/" id="ASAM">
@@ -430,8 +435,9 @@
   
 
   <tr>
-    <td width="40%" valign="top" align="center"><a href="https://p2-sam.github.io/">
-      <img src="images/P2SAM/p2sam.png" alt="P2SAM project" width="90%" style="padding-top:0px;padding-bottom:0px;border-radius:15px;">
+    <td width="40%" valign="top" align="center"><a class="project-preview" href="https://p2-sam.github.io/" aria-label="Visit the P2SAM project page">
+      <img src="images/P2SAM/p2sam.png" alt="P2SAM project preview">
+      <span class="venue-badge">ACM MM 2024</span>
     </a></td>
     <td width="60%" valign="top">
       <p><a href="https://p2-sam.github.io/" id="P2SAM">

@@ -18,6 +18,9 @@
     font-size: 16px;
     font-weight: 400
   }
+  * {
+    box-sizing: border-box;
+  }
   heading {
     font-family: 'Titillium Web', Verdana, Helvetica, sans-serif;
     font-size: 17px; /* 19 */
@@ -107,10 +110,80 @@
     background: rgba(4, 12, 17, 0.72);
     backdrop-filter: blur(5px);
   }
+  .paper-highlight {
+    display: block;
+    margin-top: 5px;
+    padding-left: 8px;
+    border-left: 3px solid #f09228;
+    color: #555;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .page-shell {
+    width: 100%;
+    max-width: 900px;
+    table-layout: fixed;
+  }
+  @media (max-width: 700px) {
+    html,
+    body {
+      margin: 0;
+      width: 100%;
+      overflow-x: hidden;
+    }
+    body, td, th {
+      font-size: 15px;
+    }
+    pageheading {
+      display: block;
+      font-size: 32px;
+      line-height: 1.2;
+      overflow-wrap: anywhere;
+    }
+    .page-shell > tbody > tr > td {
+      padding: 10px;
+    }
+    .intro-table,
+    .intro-table > tbody,
+    .intro-table > tbody > tr,
+    .intro-table > tbody > tr > td,
+    .publications-table,
+    .publications-table > tbody,
+    .publications-table > tbody > tr,
+    .publications-table > tbody > tr > td {
+      display: block;
+      width: 100% !important;
+      min-width: 0;
+      overflow-wrap: anywhere;
+    }
+    .intro-table,
+    .publications-table {
+      table-layout: fixed;
+    }
+    .intro-table > tbody > tr > td:first-child {
+      max-width: 300px;
+      margin: 0 auto;
+      padding-bottom: 0;
+    }
+    .intro-table > tbody > tr > td:last-child {
+      padding-top: 8px;
+    }
+    .publications-table > tbody > tr > td {
+      padding: 6px 4px;
+    }
+    .publications-table > tbody > tr > td:first-child {
+      padding-top: 20px;
+    }
+    .project-preview {
+      width: 100%;
+      max-width: 460px;
+    }
+  }
   </style>
   <link rel="shortcut icon" href="images/apple-touch-ri-logo-white-120x120.png">
   <script type="text/javascript" src="js/hidebib.js"></script>
   <title>Yuzhi Huang</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="Yuzhi Huang's Homepage" http-equiv="Content-Type" content="Yuzhi Huang's Homepage">
   <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,600,400italic,600italic,300,300italic' rel='stylesheet' type='text/css'>
   <!-- Start : Google Analytics Code -->
@@ -128,10 +201,10 @@
 </head>
  
 <body>
-<table width="900" border="0" align="center" border="0" cellspacing="0" cellpadding="20">
+<table class="page-shell" border="0" align="center" cellspacing="0" cellpadding="20">
   <tr><td>
 
-<table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+<table class="intro-table" width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
   <p align="center">
     <pageheading>Yuzhi Huang 「黄誉之」</pageheading><br>
   </p>
@@ -198,6 +271,8 @@
 </table>
 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="15">
       <ul>
+        <li>[2026.07]&ensp; Two papers were accepted at <strong>ACM MM 2026</strong> 🎉!</li>
+        <li>[2026.06]&ensp; <strong>Thinking in Dynamics</strong> was selected for an <strong>oral presentation</strong> at the <a href="https://datamfm.github.io/">CVPR 2026 DataMFM Workshop</a> and accepted to the <a href="https://4dvisionworkshop.github.io/">CVPR 2026 4D Vision Workshop</a>.</li>
         <li>[2026.06]&ensp; Awarded the <strong>Tsinghua Future Scholar Scholarship</strong>, a selective university-level research fellowship (<strong>only four students</strong> from Tsinghua SIGS were selected this year).</li>
         <li>[2026.06]&ensp; One paper (RoboStream) accepted at <strong>ECCV 2026</strong> 🎉!</li>
         <li>[2026.02]&ensp; One paper (Dyn-Bench) accepted at <strong>CVPR 2026</strong> 🎉!</li>
@@ -218,7 +293,7 @@
   <tr><td><sectionheading>&nbsp;&nbsp;Publications</sectionheading> &nbsp;&nbsp; ( * denotes equal contribution, † denotes project lead )</td></tr>
 </table>
  
-<table width="100%" align="center" border="0" cellspacing="0" cellpadding="15">
+<table class="publications-table" width="100%" align="center" border="0" cellspacing="0" cellpadding="15">
 
 
 
@@ -227,6 +302,29 @@
 
 
 
+
+  <tr>
+    <td width="40%" valign="top" align="center"><a class="project-preview" href="https://dyntrace.github.io/" aria-label="Visit the DynTrace project page">
+    <img src="images/dyntrace/DynTrace.png" alt="DynTrace method overview">
+    <span class="venue-badge">ACM MM 2026</span>
+    </a></td>
+    <td width="60%" valign="top">
+      <p><a href="https://dyntrace.github.io/" id="DynTrace">
+      <heading>DynTrace: Tracking Dynamic Object Evidence for 4D Spatio-Temporal Reasoning in MLLMs</heading></a><br>
+      Rongxin Gao*, <u>Yuzhi Huang*†</u>, Dongxuan Liu*, Chu Li, Zhenye Wang, Jie Wu, Shuzhao Xie, Jingyan Jiang, Xinghao Ding, Xiaotong Tu, Yue Huang<br>
+      ACM MM 2026<br>
+      </p>
+      <div class="paper" id="dyntrace">
+      <a href="https://dyntrace.github.io/">Project</a> |
+      <a href="javascript:toggleblock('dyntrace_abs')">Abstract</a>
+
+      <p align="justify"> <i id="dyntrace_abs">
+        &nbsp;&nbsp;&nbsp;&nbsp;4D spatio-temporal reasoning, jointly modeling 3D spatial structure and temporal evolution, is essential for understanding dynamic worlds and enabling embodied interaction. While current Multimodal Large Language Models (MLLMs) show strong capabilities in static scene understanding and coarse-grained 4D tasks, they still have notable limitations in continuous dynamic scene perception, especially in tracking dynamic object evidence for coherent 4D spatio-temporal reasoning. This shortcoming stems mainly from relying on sparse frame-level observations, fragmenting continuous dynamic cues and leaving models unable to disentangle genuine object dynamics from camera-induced apparent motion.<br>
+
+        &nbsp;&nbsp;&nbsp;&nbsp;Inspired by humans tracking dynamic cues while compensating for viewpoint changes, we propose <strong>DynTrace</strong>, a training-free framework for 4D spatio-temporal reasoning with two complementary components. <strong>Dynamic Trajectory Visualization (DTV)</strong> reprojects world-coordinate trajectories onto the image plane, providing geometry-informed visual priors that disentangle genuine object dynamics from camera-induced apparent motion. Meanwhile, the Dynamic Trace Token (DT-Token), organized into a <strong>Dynamic Trace Graph (DTG)</strong>, tracks object-level dynamic cues, trace evolution, and key moments, maintaining continuous dynamic object evidence for coherent 4D reasoning. Together, these two components equip MLLMs with continuously tracked dynamic object evidence, grounded in geometry-informed visual priors and structured spatio-temporal traces. DynTrace consistently improves open-source MLLMs, achieving state-of-the-art results on Dyn-Bench, VLM4D, and DSI-Bench, validating the importance of tracking dynamic object evidence for robust 4D spatio-temporal reasoning.</i></p>
+      </div>
+    </td>
+  </tr>
 
   <tr>
     <td width="40%" valign="top" align="center"><a class="project-preview" href="https://robostream123.github.io/" aria-label="Visit the RoboStream project page">
@@ -287,7 +385,8 @@
       <p><a href="https://dyn-bench.github.io/" id="DynamicBench">
       <heading>Thinking in Dynamics: How Multimodal Large Language Models Perceive, Track, and Reason Dynamics in Physical 4D World</heading></a><br>
       <u>Yuzhi Huang*†</u>, Kairun Wen*, Rongxin Gao*, Dongxuan Liu, Yibin Lou, Jie Wu, Jing Xu, Jian Zhang, Zheng Yang, Yunlong Lin, Chenxin Li, Panwang Pan, Junbin Lu, Jingyan Jiang, Xinghao Ding, Yue Huang, Zhi Wang<br>
-      CVPR 2026<br>
+      CVPR 2026
+      <span class="paper-highlight">Workshop highlights: <a href="https://datamfm.github.io/">DataMFM Oral</a> &middot; <a href="https://4dvisionworkshop.github.io/">4D Vision Workshop</a></span>
       </p>
       <div class="paper" id="dynamicbench">
       <a href="https://dyn-bench.github.io/">Project</a> |
@@ -647,6 +746,9 @@ hideallbibs();
 </script>
 <script xml:space="preserve" language="JavaScript">
   hideblock('mobile_aloha_abs');
+</script>
+<script xml:space="preserve" language="JavaScript">
+  hideblock('dyntrace_abs');
 </script>
 <script xml:space="preserve" language="JavaScript">
   hideblock('robostream_abs');

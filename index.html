@@ -1,776 +1,412 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
-
+<!doctype html>
+<html lang="en">
 <head>
-  <meta name="generator" content="HTML Tidy for Linux/x86 (vers 11 February 2007), see www.w3.org">
-  <style type="text/css">
-  /* Design Credits: Jon Barron and Deepak Pathak and Abhishek Kar and Saurabh Gupta*/
-  a {
-  color: #1772d0;
-  text-decoration:none;
-  }
-  a:focus, a:hover {
-  color: #f09228;
-  text-decoration:none;
-  }
-  body,td,th {
-    font-family: 'Titillium Web', Verdana, Helvetica, sans-serif;
-    font-size: 16px;
-    font-weight: 400
-  }
-  * {
-    box-sizing: border-box;
-  }
-  heading {
-    font-family: 'Titillium Web', Verdana, Helvetica, sans-serif;
-    font-size: 17px; /* 19 */
-    font-weight: 600 /* 1000 */
-  }
-  hr
-  {
-    border: 0;
-    height: 1px;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(123, 77, 77, 0.75), rgba(0, 0, 0, 0));
-  }
-  strong {
-    font-family: 'Titillium Web', Verdana, Helvetica, sans-serif;
-    font-size: 16px;
-    font-weight: 600 /* 800 */
-  }
-  strongred {
-    font-family: 'Titillium Web', Verdana, Helvetica, sans-serif;
-    color: 'red' ;
-    font-size: 16px
-  }
-  sectionheading {
-    font-family: 'Titillium Web', Verdana, Helvetica, sans-serif;
-    font-size: 22px;
-    font-weight: 600
-  }
-  pageheading {
-    font-family: 'Titillium Web', Verdana, Helvetica, sans-serif;
-    font-size: 38px;
-    font-weight: 400
-  }
-  .ImageBorder
-  {
-      border-width: 1px;
-      border-color: Black;
-  }
-  .disabled-link {
-    color: #999999;
-    cursor: default;
-    text-decoration: none;
-  }
-  .project-preview {
-    position: relative;
-    display: inline-block;
-    width: 90%;
-    overflow: hidden;
-    border-radius: 15px;
-    background: #0b1318;
-    box-shadow: 0 8px 22px rgba(11, 31, 42, 0.18);
-  }
-  .project-preview img,
-  .project-preview video {
-    display: block;
-    width: 100%;
-    transition: transform 0.35s ease, filter 0.35s ease;
-  }
-  .project-preview:hover img,
-  .project-preview:hover video {
-    transform: scale(1.025);
-    filter: saturate(1.08);
-  }
-  .venue-badge,
-  .robostream-demo-label {
-    position: absolute;
-    z-index: 1;
-    color: #fff;
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.06em;
-    line-height: 1;
-    pointer-events: none;
-  }
-  .venue-badge {
-    top: 9px;
-    left: 9px;
-    padding: 6px 8px;
-    border-radius: 6px;
-    background: #9a2036;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
-  }
-  .robostream-demo-label {
-    right: 9px;
-    bottom: 9px;
-    padding: 6px 8px;
-    border: 1px solid rgba(255, 255, 255, 0.38);
-    border-radius: 999px;
-    background: rgba(4, 12, 17, 0.72);
-    backdrop-filter: blur(5px);
-  }
-  .paper-highlight {
-    display: block;
-    margin-top: 5px;
-    padding-left: 8px;
-    border-left: 3px solid #f09228;
-    color: #555;
-    font-size: 14px;
-    font-weight: 600;
-  }
-  .page-shell {
-    width: 100%;
-    max-width: 900px;
-    table-layout: fixed;
-  }
-  @media (max-width: 700px) {
-    html,
-    body {
-      margin: 0;
-      width: 100%;
-      overflow-x: hidden;
-    }
-    body, td, th {
-      font-size: 15px;
-    }
-    pageheading {
-      display: block;
-      font-size: 32px;
-      line-height: 1.2;
-      overflow-wrap: anywhere;
-    }
-    .page-shell > tbody > tr > td {
-      padding: 10px;
-    }
-    .intro-table,
-    .intro-table > tbody,
-    .intro-table > tbody > tr,
-    .intro-table > tbody > tr > td,
-    .publications-table,
-    .publications-table > tbody,
-    .publications-table > tbody > tr,
-    .publications-table > tbody > tr > td {
-      display: block;
-      width: 100% !important;
-      min-width: 0;
-      overflow-wrap: anywhere;
-    }
-    .intro-table,
-    .publications-table {
-      table-layout: fixed;
-    }
-    .intro-table > tbody > tr > td:first-child {
-      max-width: 300px;
-      margin: 0 auto;
-      padding-bottom: 0;
-    }
-    .intro-table > tbody > tr > td:last-child {
-      padding-top: 8px;
-    }
-    .publications-table > tbody > tr > td {
-      padding: 6px 4px;
-    }
-    .publications-table > tbody > tr > td:first-child {
-      padding-top: 20px;
-    }
-    .project-preview {
-      width: 100%;
-      max-width: 460px;
-    }
-  }
-  </style>
-  <link rel="shortcut icon" href="images/apple-touch-ri-logo-white-120x120.png">
-  <script type="text/javascript" src="js/hidebib.js"></script>
-  <title>Yuzhi Huang</title>
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="Yuzhi Huang's Homepage" http-equiv="Content-Type" content="Yuzhi Huang's Homepage">
-  <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,600,400italic,600italic,300,300italic' rel='stylesheet' type='text/css'>
-  <!-- Start : Google Analytics Code -->
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-    ga('create', 'UA-XXXXX-Y', 'auto');
-    ga('send', 'pageview');
-    </script>
-  <!-- End : Google Analytics Code -->
-  <!-- Scramble Script by Jeff Donahue -->
-  <script src="js/scramble.js"></script>
+  <meta name="description" content="Yuzhi Huang — Ph.D. student working on embodied AI, 4D world modeling, multimodal reasoning, and vision foundation models.">
+  <title>Yuzhi Huang</title>
+  <link rel="stylesheet" href="styles-redesign.css">
+  <script src="js/redesign.js" defer></script>
 </head>
- 
 <body>
-<table class="page-shell" border="0" align="center" cellspacing="0" cellpadding="20">
-  <tr><td>
-
-<table class="intro-table" width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-  <p align="center">
-    <pageheading>Yuzhi Huang 「黄誉之」</pageheading><br>
-  </p>
-
-  <tr>
-    <td width="30%" valign="top"><a href="images/profile_fig/yuzhi.jpg"><img src="images/profile_fig/yuzhi.jpg" width="100%" style="border-radius:15px"></a>
-    <p align=center>
-    | <a href="https://github.com/yu2hi13/yu2hi13/blob/main/Yuzhihuang_Resume.pdf">CV</a> |
-    <a href="mailto:yz_huang13@163.com">Email</a> |
-    <a href="https://github.com/yu2hi13">Github</a> |
-    <br/>
-    | <a href="https://scholar.google.com.hk/citations?user=XgWSoXkAAAAJ&hl=zh-CN">Google Scholar</a> |
-    <a href="https://huggingface.co/yu2hi13">HuggingFace</a> |
-    <br/>
-    | <a href="https://www.linkedin.com/in/huangyuzhi/">LinkedIn</a> |
-    <!-- <a href="https://www.instagram.com/huangyuzhi/">Instagram</a> | -->
-    <a href="https://www.xiaohongshu.com/user/profile/605b47df000000000100b0a5">RedNote</a> |    
-    </p>
-    
-
-    <!-- <p align="center" style="margin-top:-8px;">
-      <iframe id="twitter-widget-0" 
-              scrolling="no" 
-              frameborder="0" 
-              allowtransparency="true" 
-              allowfullscreen="true" 
-              class="twitter-follow-button twitter-follow-button-rendered" 
-              style="position: static; visibility: visible; width: 156px; height: 20px;" 
-              title="Twitter Follow Button" 
-              src="https://platform.twitter.com/widgets/follow_button.2f70fb173b9000da126c79afe2098f02.en.html#dnt=false&amp;id=twitter-widget-0&amp;lang=en&amp;screen_name=huangyuzhi&amp;show_count=false&amp;show_screen_name=true&amp;size=m" 
-              data-screen-name="huangyuzhi">
-      </iframe>
-      <script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-  </p> -->
-
-
-    </td>
-    <td width="70%" valign="top" align="justify">
-      <p>
-        I am a first-year Ph.D. student at <a href="https://mmlab-sigs.github.io/groups/self-evolving-embodied-agents-group/">MMLab@SIGS</a>, <a href="https://www.sigs.tsinghua.edu.cn/">Tsinghua Shenzhen International Graduate School (SIGS)</a>, advised by Prof. <a href="http://zwang.inflexionlab.org/">Zhi Wang</a>. Before that, I received my master's degree from the School of Informatics at <a href="https://www.xmu.edu.cn/">Xiamen University</a>, advised by Prof. <a href="https://scholar.google.com/citations?user=k5hVBfMAAAAJ&hl=zh-CN">Xinghao Ding</a> and Prof. <a href="https://huangyue05.github.io/">Yue Huang</a>. I also collaborate with Dr. <a href="https://chenxinli001.github.io/">Chenxin Li</a> from the <a href="https://www.ee.cuhk.edu.hk/~yxyuan/index.htm">AIM</a> group at The Chinese University of Hong Kong. My long-term research goal is to develop embodied agents that are fundamentally grounded in the dynamic physical world, progressing from 4D scene modeling and multimodal dynamic reasoning toward agents capable of robust planning and action in open-ended, long-horizon real-world environments.
-        <br>
-      </p>
-
-      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; My current research primarily covers the following topics:
-        <ul>
-          <li><strong style="color: #9A2036;">Embodied AI &amp; Robotic Agents</strong>: Long-horizon manipulation, spatio-temporal reasoning with persistent memory, VLM-based robotic planning.</li>
-          <li><strong style="color: #2092E4;">4D World Modeling &amp; Perception</strong>: Dynamic scene reconstruction, spatio-temporal understanding, streaming vision for embodied 4D perception.</li>
-          <li><strong style="color: #e18a3b;">Multimodal LLM Evaluation &amp; Adaptation</strong>: Benchmarking MLLMs on dynamic reasoning, task-specific fine-tuning for spatial and temporal understanding.</li>
-          <li><strong style="color: #27AE60;">Vision Foundation Models</strong>: Video anomaly detection, ambiguity-aware segmentation, SAM-based perception.</li>
+  <header class="masthead">
+    <div class="masthead__inner-wrap">
+      <nav class="greedy-nav" aria-label="Main navigation">
+        <a class="nav-home" href="#about-me">Homepage</a>
+        <button class="menu-button" type="button" aria-label="Open navigation" aria-expanded="false">
+          <span class="navicon"></span>
+        </button>
+        <ul class="visible-links">
+          <li><a href="#about-me">About Me</a></li>
+          <li><a href="#research">Research</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#publications">Publications</a></li>
+          <li><a href="#honors">Honors and Awards</a></li>
+          <li><a href="#educations">Educations</a></li>
+          <li><a href="#internships">Internships</a></li>
+          <li><a href="#service">Academic Services</a></li>
         </ul>
-      </p>
+      </nav>
+    </div>
+  </header>
 
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>WeChat</strong>: Swaggyzz-13 &nbsp;&nbsp; <strong>Email</strong>: yz_huang13@163.com
-      </p>
-     
-    </td>
-  </tr>
-</table>
+  <div id="main">
+    <aside class="sidebar">
+      <div class="profile_box sticky">
+        <div class="author__avatar">
+          <img src="images/profile_fig/yuzhi.jpg" alt="Yuzhi Huang">
+        </div>
 
-<hr/>
+        <div class="author__content">
+          <h1 class="author__name">Yuzhi Huang · 黄誉之</h1>
+          <p class="author__bio">Tsinghua Shenzhen International Graduate School, Xiamen University</p>
+        </div>
 
-<table width="100%" align="center" border="0" cellspacing="0" cellpadding="10">
-  <tr><td><sectionheading>&nbsp;&nbsp;Recent News</sectionheading></td></tr>
-</table>
-<table width="100%" align="center" border="0" cellspacing="0" cellpadding="15">
-      <ul>
-        <li>[2026.07]&ensp; Two papers were accepted at <strong>ACM MM 2026</strong> 🎉!</li>
-        <li>[2026.06]&ensp; <strong>Thinking in Dynamics</strong> was selected for an <strong>oral presentation</strong> at the <a href="https://datamfm.github.io/">CVPR 2026 DataMFM Workshop</a> and accepted to the <a href="https://4dvisionworkshop.github.io/">CVPR 2026 4D Vision Workshop</a>.</li>
-        <li>[2026.06]&ensp; Awarded the <strong>Tsinghua Future Scholar Scholarship</strong>, a selective university-level research fellowship (<strong>only four students</strong> from Tsinghua SIGS were selected this year).</li>
-        <li>[2026.06]&ensp; One paper (RoboStream) accepted at <strong>ECCV 2026</strong> 🎉!</li>
-        <li>[2026.02]&ensp; One paper (Dyn-Bench) accepted at <strong>CVPR 2026</strong> 🎉!</li>
-        <li>[2025.09]&ensp; One paper (DynamicVerse) accepted at <strong>NeurIPS 2025</strong>.</li>
-        <li>[2025.02]&ensp; One paper (Track Any Anomalous Object) accepted at <strong>CVPR 2025</strong>.</li>
-        <li>[2024.09]&ensp; One paper (Flaws can be Applause) accepted to <strong>NeurIPS 2024</strong>.</li>
-        <li>[2024.07]&ensp; One paper (P^2SAM) accepted to <strong>ACM MM 2024</strong>.</li>
-      </ul>
-    </td>
-  </tr>
-  
-</table>
+        <div class="author__urls-wrapper">
+          <ul class="author__urls">
+            <li class="bio-line">Ph.D. student at MMLab@SIGS.</li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+              Shenzhen, China
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 5h16v14H4z"/><path d="m4 7 8 6 8-6"/></svg>
+              <a href="mailto:yz_huang13@163.com">Email: yz_huang13@163.com</a>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M8.5 5C4.9 5 2 7.4 2 10.4c0 1.7.9 3.2 2.4 4.2L3.8 17l2.8-1.3c.6.1 1.2.2 1.9.2 3.6 0 6.5-2.4 6.5-5.4S12.1 5 8.5 5Z"/><path d="M14.5 9c4.1 0 7.5 2.7 7.5 6 0 1.8-1 3.5-2.7 4.6l.7 2.4-3-1.3c-.8.2-1.6.3-2.5.3-3.8 0-7-2.3-7.4-5.3"/></svg>
+              <span class="contact-text">WeChat: Swaggyzz-13</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 19c-4 1.5-4-2-6-2m12 4v-3.5c0-1 .1-1.5-.5-2 2.7-.3 5.5-1.3 5.5-6A4.6 4.6 0 0 0 19 6.3 4.2 4.2 0 0 0 18.9 3S17.8 2.7 15 4.3a11.5 11.5 0 0 0-6 0C6.2 2.7 5.1 3 5.1 3A4.2 4.2 0 0 0 5 6.3a4.6 4.6 0 0 0-1 3.2c0 4.7 2.8 5.7 5.5 6-.5.4-.6 1-.5 2V21"/></svg>
+              <a href="https://github.com/yu2hi13">GitHub</a>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m3 9 9-5 9 5-9 5-9-5Z"/><path d="M7 12v5c3 2 7 2 10 0v-5"/></svg>
+              <a href="https://scholar.google.com.hk/citations?user=XgWSoXkAAAAJ&amp;hl=zh-CN">Google Scholar</a>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"/></svg>
+              <a href="https://huggingface.co/yu2hi13">HuggingFace</a>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8 9h8M8 13h8M10 9v7M14 9v7"/></svg>
+              <a href="https://www.xiaohongshu.com/user/profile/605b47df000000000100b0a5?xsec_token=YBA6B53KOHou1FOEIZZDe1jXgAov_QDXVghnrORs7tdx8&amp;xsec_source=app_share&amp;xhsshare=WeixinSession&amp;appuid=605b47df000000000100b0a5&amp;apptime=1785129678&amp;share_id=2807756b6a774200b7b4c085c28861ed&amp;wechatWid=2336863facef690149819a98448918c2&amp;wechatOrigin=menu">RedNote (小红书)</a>
+            </li>
+          </ul>
 
-
-<hr/>
-
-<table width="100%" align="center" border="0" cellspacing="0" cellpadding="10">
-  <tr><td><sectionheading>&nbsp;&nbsp;Publications</sectionheading> &nbsp;&nbsp; ( * denotes equal contribution, † denotes project lead )</td></tr>
-</table>
- 
-<table class="publications-table" width="100%" align="center" border="0" cellspacing="0" cellpadding="15">
-
-
-
-
-
-
-
-
-
-  <tr>
-    <td width="40%" valign="top" align="center"><a class="project-preview" href="https://dyntrace.github.io/" aria-label="Visit the DynTrace project page">
-    <img src="images/dyntrace/DynTrace.png" alt="DynTrace method overview">
-    <span class="venue-badge">ACM MM 2026</span>
-    </a></td>
-    <td width="60%" valign="top">
-      <p><a href="https://dyntrace.github.io/" id="DynTrace">
-      <heading>DynTrace: Tracking Dynamic Object Evidence for 4D Spatio-Temporal Reasoning in MLLMs</heading></a><br>
-      Rongxin Gao*, <u>Yuzhi Huang*†</u>, Dongxuan Liu*, Chu Li, Zhenye Wang, Jie Wu, Shuzhao Xie, Jingyan Jiang, Xinghao Ding, Xiaotong Tu, Yue Huang<br>
-      ACM MM 2026<br>
-      </p>
-      <div class="paper" id="dyntrace">
-      <a href="https://dyntrace.github.io/">Project</a> |
-      <a href="javascript:toggleblock('dyntrace_abs')">Abstract</a>
-
-      <p align="justify"> <i id="dyntrace_abs">
-        &nbsp;&nbsp;&nbsp;&nbsp;4D spatio-temporal reasoning, jointly modeling 3D spatial structure and temporal evolution, is essential for understanding dynamic worlds and enabling embodied interaction. While current Multimodal Large Language Models (MLLMs) show strong capabilities in static scene understanding and coarse-grained 4D tasks, they still have notable limitations in continuous dynamic scene perception, especially in tracking dynamic object evidence for coherent 4D spatio-temporal reasoning. This shortcoming stems mainly from relying on sparse frame-level observations, fragmenting continuous dynamic cues and leaving models unable to disentangle genuine object dynamics from camera-induced apparent motion.<br>
-
-        &nbsp;&nbsp;&nbsp;&nbsp;Inspired by humans tracking dynamic cues while compensating for viewpoint changes, we propose <strong>DynTrace</strong>, a training-free framework for 4D spatio-temporal reasoning with two complementary components. <strong>Dynamic Trajectory Visualization (DTV)</strong> reprojects world-coordinate trajectories onto the image plane, providing geometry-informed visual priors that disentangle genuine object dynamics from camera-induced apparent motion. Meanwhile, the Dynamic Trace Token (DT-Token), organized into a <strong>Dynamic Trace Graph (DTG)</strong>, tracks object-level dynamic cues, trace evolution, and key moments, maintaining continuous dynamic object evidence for coherent 4D reasoning. Together, these two components equip MLLMs with continuously tracked dynamic object evidence, grounded in geometry-informed visual priors and structured spatio-temporal traces. DynTrace consistently improves open-source MLLMs, achieving state-of-the-art results on Dyn-Bench, VLM4D, and DSI-Bench, validating the importance of tracking dynamic object evidence for robust 4D spatio-temporal reasoning.</i></p>
+          <div class="author__social-small">
+            <a href="mailto:yz_huang13@163.com">Email: yz_huang13@163.com</a>
+            <span class="contact-text">WeChat: Swaggyzz-13</span>
+            <a href="https://github.com/yu2hi13">GitHub</a>
+            <a href="https://scholar.google.com.hk/citations?user=XgWSoXkAAAAJ&amp;hl=zh-CN">Scholar</a>
+            <a href="https://huggingface.co/yu2hi13">HuggingFace</a>
+            <a href="https://www.xiaohongshu.com/user/profile/605b47df000000000100b0a5?xsec_token=YBA6B53KOHou1FOEIZZDe1jXgAov_QDXVghnrORs7tdx8&amp;xsec_source=app_share&amp;xhsshare=WeixinSession&amp;appuid=605b47df000000000100b0a5&amp;apptime=1785129678&amp;share_id=2807756b6a774200b7b4c085c28861ed&amp;wechatWid=2336863facef690149819a98448918c2&amp;wechatOrigin=menu">RedNote</a>
+          </div>
+        </div>
       </div>
-    </td>
-  </tr>
+    </aside>
 
-  <tr>
-    <td width="40%" valign="top" align="center"><a class="project-preview" href="https://robostream123.github.io/" aria-label="Visit the RoboStream project page">
-    <video playsinline autoplay loop muted preload="metadata" poster="images/RoboStream/Overview.png" aria-hidden="true" style="aspect-ratio:16/9;object-fit:cover;">
-      <source src="images/RoboStream/RoboStream-preview.mp4" type="video/mp4">
-    </video>
-    <span class="venue-badge">ECCV 2026</span>
-    <span class="robostream-demo-label">▶ ROBOT DEMO</span>
-    </a></td>
-    <td width="60%" valign="top">
-      <p><a href="https://robostream123.github.io/" id="RoboStream">
-      <heading>RoboStream: Weaving Spatio-Temporal Reasoning with Memory in Vision-Language Models for Robotics</heading></a><br>
-      <u>Yuzhi Huang*†</u>, Jie Wu*, Weijue Bu, Ziyi Xiong, Gaoyang Jiang, Ye Li, Kangye Ji, Shuzhao Xie, Yue Huang, Chenglei Wu, Jingyan Jiang, Zhi Wang<br>
-      ECCV 2026<br>
-      </p>
-      <div class="paper" id="robostream">
-      <a href="https://robostream123.github.io/">Project</a> |
-      <a href="https://arxiv.org/abs/2603.12939">Paper</a> |
-      <a href="javascript:toggleblock('robostream_abs')">Abstract</a>
+    <main class="page">
+      <div class="page__content">
+        <section class="about" id="about-me">
+          <p>👋 I am a first-year Ph.D. student and a member of the <strong><a href="https://mmlab-sigs.github.io/groups/self-evolving-embodied-agents-group/">Self-Evolving Embodied Agents Group at MMLab@SIGS</a></strong>, <strong><a href="https://www.sigs.tsinghua.edu.cn/">Tsinghua Shenzhen International Graduate School</a></strong>, advised by Prof. <strong><a href="http://zwang.inflexionlab.org/">Zhi Wang</a></strong>.</p>
 
-      <p align="justify"> <i id="robostream_abs">
-        &nbsp;&nbsp;&nbsp;&nbsp;Current VLM-based robotic planners treat each manipulation step independently, recomputing scene geometry from pixels at every decision point without memory of prior actions or occluded objects. This causes perceptual errors to accumulate and breaks preconditions for subsequent steps, fundamentally limiting long-horizon task completion.<br>
+          <p>🤔 My research focuses on Embodied AI, 4D World Modeling, Multimodal Dynamic Reasoning, and Vision Foundation Models, toward <strong>open-world embodied intelligence</strong>.</p>
 
-        &nbsp;&nbsp;&nbsp;&nbsp;To address this, we propose <strong>RoboStream</strong>, a training-free framework that weaves spatio-temporal reasoning with persistent memory into VLMs. RoboStream introduces two core components: <strong>Spatio-Temporal Fusion Tokens (STF-Tokens)</strong> that bind visual evidence with 3D geometric attributes for persistent object grounding across long horizons, and a <strong>Causal Spatio-Temporal Graph (CSTG)</strong> that records action-triggered state transitions to capture how actions reshape the environment over time. Together, they enable geometric anchoring and causal reasoning akin to human mental models. RoboStream achieves 90.5% on long-horizon RLBench and 44.4% on challenging real-world block-building tasks, substantially outperforming comparable methods.</i></p>
-      </div>
-    </td>
-  </tr>
+          <p>🙋‍♂️ If you are seeking any form of <strong>academic cooperation</strong>, please feel free to email me at <a href="mailto:yz_huang13@163.com">yz_huang13@163.com</a>.</p>
 
-  <tr>
-    <td width="40%" valign="top" align="center"><a class="project-preview" href="https://zipvggt.github.io/" aria-label="Visit the Zip-VGGT project page">
-    <img src="images/zipvggt/Zip-VGGT.png" alt="Zip-VGGT project preview">
-    <span class="venue-badge">PREPRINT</span>
-    </a></td>
-    <td width="60%" valign="top">
-      <p><a href="https://zipvggt.github.io/" id="zipvggt">
-      <heading>Zip-VGGT: Object-Centric Spatiotemporal KV Compression for Streaming Vision Transformers</heading></a><br>
-      Kairun Wen†, Runyu Chen, Wenyan Cong, Peiwei Lin, Tao Lu, Lihan Jiang, Weiguang Zhao, Junting Dong, Yunlong Lin, <u>Yuzhi Huang</u>, Xinghao Ding, Hongsheng Li, Linning Xu, Mulin Yu<br>
-      Preprint<br>
-      </p>
-      <div class="paper" id="zipvggt">
-      <a href="https://zipvggt.github.io/">Project</a> |
-      <a href="javascript:toggleblock('zipvggt_abs')">Abstract</a>
+          <p>🎓 Before that, I received my master's degree from the School of Informatics at <strong><a href="https://www.xmu.edu.cn/">Xiamen University</a></strong>, where I was a member of the <strong><a href="https://xmu-smartdsp.github.io/">SmartDSP Lab</a></strong> and was advised by Prof. <strong><a href="https://scholar.google.com/citations?user=k5hVBfMAAAAJ&amp;hl=zh-CN">Xinghao Ding</a></strong> and Prof. <strong><a href="https://huangyue05.github.io/">Yue Huang</a></strong>. I also collaborate with Dr. <strong><a href="https://chenxinli001.github.io/">Chenxin Li</a></strong> from the AIM group at The Chinese University of Hong Kong.</p>
+        </section>
 
-      <p align="justify"> <i id="zipvggt_abs">
-        &nbsp;&nbsp;&nbsp;&nbsp;Streaming vision architectures have emerged as a powerful paradigm for embodied 4D spatial perception, enabling on-the-fly scene reconstruction. However, deploying these models in real-world infinite-horizon scenarios exposes a critical memory bottleneck: the unbounded accumulation of historical representations in the Key-Value (KV) cache. Existing token compression strategies attempt to mitigate this but suffer from decoupled, heuristic processing. They blindly aggregate tokens across physical boundaries, destroying high-frequency 3D geometry, and employ motion-blind eviction policies that erase the temporal trajectories of highly dynamic objects. <br>
+        <section id="research">
+          <h1 class="section-title">📌 Research Interests</h1>
+          <div class="research-interest">
+            <p class="research-summary">My research focuses on building <strong>embodied agents</strong> that can perceive, remember, reason, and act in dynamic physical environments, including: (i) <strong>VLM-based robotic agents with persistent spatio-temporal memory</strong> for long-horizon manipulation, (ii) <strong>physical-scale and streaming 4D world modeling</strong>, (iii) multimodal evaluation and enhancement for <strong>localized dynamics perception and 4D reasoning</strong>, and (iv) <strong>foundation-model-based perception</strong> under anomalous or ambiguous visual conditions. These directions connect dynamic perception, multimodal reasoning, persistent memory, and grounded action toward <strong>open-world embodied intelligence</strong>.</p>
 
-        &nbsp;&nbsp;&nbsp;&nbsp;To shatter this dilemma, we propose <strong>Zip-VGGT</strong>, the first object-centric spatiotemporal KV compression framework tailored for streaming vision models. Our core insight is to guide compression using high-level semantic and kinematic priors without introducing heavy computational overhead. Specifically, Zip-VGGT synergizes crisp 2D entity boundaries from a lightweight Segment Anything Model (SAM) with implicit 3D motion representations naturally encoded within the backbone's global attention layers. This enables object-bounded geometric spatial merging to fiercely preserve 3D topologies, alongside motion-aware temporal eviction that dynamically allocates cache budgets to retain interactive dynamic elements. Extensive experiments demonstrate that Zip-VGGT achieves huge compression ratios and inference speedups, successfully preventing memory explosion while maintaining high-fidelity 4D reconstruction for long-term embodied perception.</i></p>
-      </div>
-    </td>
-  </tr>
+            <div class="research-group">
+              <h2>Embodied AI &amp; Robotic Agents</h2>
+              <ul>
+                <li><strong>Long-horizon robotic manipulation and VLM-based planning:</strong> <a href="https://robostream123.github.io/">RoboStream</a></li>
+              </ul>
+            </div>
 
-  <tr>
-    <td width="40%" valign="top" align="center"><a class="project-preview" href="https://dyn-bench.github.io/" aria-label="Visit the Dyn-Bench project page">
-    <img src="images/dynbench/Dynbench-teaser.png" alt="Dyn-Bench project preview">
-    <span class="venue-badge">CVPR 2026</span>
-    </a></td>
-    <td width="60%" valign="top">
-      <p><a href="https://dyn-bench.github.io/" id="DynamicBench">
-      <heading>Thinking in Dynamics: How Multimodal Large Language Models Perceive, Track, and Reason Dynamics in Physical 4D World</heading></a><br>
-      <u>Yuzhi Huang*†</u>, Kairun Wen*, Rongxin Gao*, Dongxuan Liu, Yibin Lou, Jie Wu, Jing Xu, Jian Zhang, Zheng Yang, Yunlong Lin, Chenxin Li, Panwang Pan, Junbin Lu, Jingyan Jiang, Xinghao Ding, Yue Huang, Zhi Wang<br>
-      CVPR 2026
-      <span class="paper-highlight">Workshop highlights: <a href="https://datamfm.github.io/">DataMFM Oral</a> &middot; <a href="https://4dvisionworkshop.github.io/">4D Vision Workshop</a></span>
-      </p>
-      <div class="paper" id="dynamicbench">
-      <a href="https://dyn-bench.github.io/">Project</a> |
-      <a href="https://arxiv.org/abs/2512.00300">Paper</a> |
-      <a href="javascript:toggleblock('dynamicbench_abs')">Abstract</a> |
-      <a href="https://huggingface.co/datasets/yu2hi13/Dyn-Bench">HF Data</a> |
-      <a href="https://github.com/Dynamics-X/Thinking-in-Dynamics">Code</a>
+            <div class="research-group">
+              <h2>4D World Modeling &amp; Streaming Perception</h2>
+              <ul>
+                <li><strong>Physical-scale multimodal 4D modeling:</strong> <a href="https://dynamic-verse.github.io/">DynamicVerse</a></li>
+                <li><strong>Object-centric streaming perception and memory compression:</strong> <a href="https://zipvggt.github.io/">Zip-VGGT</a></li>
+              </ul>
+            </div>
 
-      <p align="justify"> <i id="dynamicbench_abs">
-        &nbsp;&nbsp;&nbsp;&nbsp;Humans inhabit a physical 4D world where geometric structure and semantic content evolve over time, constituting a dynamic 4D reality (spatial with temporal dimension). While current Multimodal Large Language Models (MLLMs) excel in static visual understanding, can they also be adept at "thinking in dynamics", i.e., perceive, track and reason about spatio-temporal dynamics in evolving scenes? <br>
+            <div class="research-group">
+              <h2>Multimodal Dynamic Reasoning &amp; Evaluation</h2>
+              <ul>
+                <li><strong>Benchmarking localized dynamics perception and 4D reasoning:</strong> <a href="https://dyn-bench.github.io/">Thinking in Dynamics (Dyn-Bench)</a></li>
+                <li><strong>Continuous dynamic evidence tracking for MLLMs:</strong> <a href="https://dyntrace.github.io/">DynTrace</a></li>
+              </ul>
+            </div>
 
-        &nbsp;&nbsp;&nbsp;&nbsp;To systematically assess their spatio-temporal reasoning and localized dynamics perception capabilities, we introduce <strong>Dyn-Bench</strong>, a large-scale benchmark built from diverse real-world and synthetic video datasets, enabling robust and scalable evaluation of spatio-temporal understanding. Through multi-stage filtering from massive 2D and 4D data sources, Dyn-Bench provides a high-quality collection of dynamic scenes, comprising 1k videos, 7k visual question answering (VQA) pairs, and 3k dynamic object grounding pairs. We probe general, spatial and region-level MLLMs to express how they think in dynamics both linguistically and visually, and find that existing models cannot simultaneously maintain strong performance in both spatio-temporal reasoning and dynamic object grounding, often producing inconsistent interpretations of motion and interaction. Notably, conventional prompting strategies (e.g., chain-of-thought or caption-based hints) provide limited improvement, whereas structured integration approaches, including Mask-Guided Fusion and Spatio-Temporal Textual Cognitive Map (ST-TCM), significantly enhance MLLMs' dynamics perception and spatio-temporal reasoning in the physical 4D world.</i></p>
-      </div>
-    </td>
-  </tr>
+            <div class="research-group">
+              <h2>Vision Foundation Models for Robust Perception</h2>
+              <ul>
+                <li><strong>Granular video anomaly detection:</strong> <a href="https://tao-25.github.io/">Track Any Anomalous Object</a></li>
+                <li><strong>Ambiguity-aware segmentation with SAM:</strong> <a href="https://a-sa-m.github.io/">ASAM</a>, <a href="https://p2-sam.github.io/">P²SAM</a></li>
+              </ul>
+            </div>
 
-  <tr>
-    <td width="40%" valign="top" align="center"><a class="project-preview" href="https://dynamic-verse.github.io/" aria-label="Visit the DynamicVerse project page">
-    <video playsinline autoplay loop muted src="images/dynamic_verse/DynamicVerse-preview.mp4" poster="./images/loading-icon.gif" aria-hidden="true"></video>
-    <span class="venue-badge">NeurIPS 2025</span>
-    </a></td>
-    <td width="60%" valign="top">
-      <p><a href="https://dynamic-verse.github.io/" id="DynamicVerse">
-      <heading>DynamicVerse: Physically-Aware Multimodal Modeling for Dynamic 4D Worlds</heading></a><br>
-      Kairun Wen*, <u>Yuzhi Huang*</u>, Runyu Chen, Hui Zheng, Yunlong Lin, Panwang Pan, Chenxin Li, Wenyan Cong, Jian Zhang, Junbin Lu, Chenguo Lin, Dilin Wang, Zhicheng Yan, Hongyu Xu, Justin Theiss, Yue Huang, Xinghao Ding, Rakesh Ranjan, Zhiwen Fan<br>
-      NeurIPS 2025<br>
-      </p>
+            <p class="research-contact">✉️ Welcome to contact me for discussions and collaborations on embodied AI, 4D world understanding, and multimodal reasoning.</p>
+          </div>
+        </section>
 
-      <div class="paper" id="DynamicVerse">
-      <a href="https://dynamic-verse.github.io/">Project</a> |
-      <a>Paper</a> |
-      <a href="javascript:toggleblock('DynamicVerse_abs')">Abstract</a> 
+        <section id="news">
+          <h1 class="section-title">🔥 News</h1>
+          <ul class="news-list">
+            <li><em>2026.07</em>: &nbsp;🎉 Two papers were accepted at <strong>ACM MM 2026</strong>!</li>
+            <li><em>2026.06</em>: &nbsp;🎉 <strong>Thinking in Dynamics</strong> was selected for an <strong>oral presentation</strong> at the <a href="https://datamfm.github.io/">CVPR 2026 DataMFM Workshop</a> and was also accepted to the <a href="https://4dvisionworkshop.github.io/">CVPR 2026 4D Vision Workshop</a>.</li>
+            <li><em>2026.06</em>: &nbsp;🎉 Awarded the <strong><a href="https://mp.weixin.qq.com/s/oOqGxVULSwP5Uy_Cv5WItg">Tsinghua Future Scholar Scholarship</a></strong>, a highly selective university-level fellowship recognizing academic potential; only four students from Tsinghua SIGS were selected in 2026.</li>
+            <li><em>2026.06</em>: &nbsp;🎉 <strong>RoboStream</strong> was accepted at ECCV 2026.</li>
+            <li><em>2026.02</em>: &nbsp;🎉 <strong>Thinking in Dynamics (Dyn-Bench)</strong> was accepted to the <strong>CVPR 2026 Main Conference</strong>.</li>
+            <li><em>2025.09</em>: &nbsp;🎉 <strong>DynamicVerse</strong> was accepted at NeurIPS 2025.</li>
+            <li><em>2025.02</em>: &nbsp;🎉 <strong>Track Any Anomalous Object</strong> was accepted at CVPR 2025.</li>
+            <li><em>2024.09</em>: &nbsp;🎉 <strong>Flaws can be Applause</strong> was accepted at NeurIPS 2024.</li>
+            <li><em>2024.07</em>: &nbsp;🎉 <strong>P²SAM</strong> was accepted at ACM MM 2024.</li>
+          </ul>
+        </section>
 
+        <section id="publications">
+          <h1 class="section-title">📝 Publications</h1>
+          <p class="publication-note">* denotes equal contribution, † denotes project lead.</p>
 
-      <p align="justify"> <i id="DynamicVerse_abs">
-        &nbsp;&nbsp;&nbsp;&nbsp;Understanding the dynamic physical world, characterized by its evolving 3D structure, real-world motion, and semantic content with textual descriptions, is crucial for human-agent interaction and enables embodied agents to perceive and act within real environments with human‑like capabilities.
-        However, existing datasets are often derived from limited simulators or utilize traditional Structure-from-Motion for up-to-scale annotation and offer limited descriptive captioning, which restricts the capacity of foundation models to accurately interpret real-world dynamics from monocular videos, commonly sourced from the internet.
-        To bridge these gaps, we introduce <strong><span style="color: rgb(32, 146, 228);">DynamicVerse</span></strong>, a physical‑scale, multimodal 4D modeling framework for real-world video. We employ large vision, geometric, and multimodal models to interpret metric-scale static geometry, real-world dynamic motion, instance-level masks, and holistic descriptive captions. 
-        By integrating window-based Bundle Adjustment with global optimization, our method converts long real-world video sequences into a comprehensive 4D multimodal format. 
-        DynamicVerse delivers a large-scale dataset consists of 100K+ videos with 800K+ annotated masks and 10M+ frames from internet videos.
-        Experimental evaluations on three benchmark tasks---video depth estimation, camera pose estimation, and camera intrinsics estimation---validate that our 4D modeling achieves superior performance in capturing physical-scale measurements with greater global accuracy than existing methods.
-      </i></p>
-
-<!-- <!-- <pre xml:space="preserve">
-  @misc{lin2024unsupervisedlowlightimageenhancement,
-    title={Unsupervised Low-light Image Enhancement with Lookup Tables and Diffusion Priors}, 
-    author={Yunlong Lin and Zhenqi Fu and Yuzhi Huang and Tian Ye and Sixiang Chen and Ge Meng and Yingying Wang and Yue Huang and Xiaotong Tu and Xinghao Ding},
-    year={2024},
-    eprint={2409.18899},
-    archivePrefix={arXiv},
-    primaryClass={cs.CV},
-    url={https://arxiv.org/abs/2409.18899}, 
-  }
-</pre> -->
-      </div>
-    </td>
-  </tr>
-
-
-
-
-
-
-  <tr>
-    <td width="40%" valign="top" align="center"><a class="project-preview" href="https://tao-25.github.io/" aria-label="Visit the Track Any Anomalous Object project page">
-    <img src="images/TAO/TAO.png" alt="Track Any Anomalous Object project preview">
-    <span class="venue-badge">CVPR 2025</span>
-    </a></td>
-    <td width="60%" valign="top">
-      <p><a href="https://tao-25.github.io/" id="Tao">
-      <heading>Track Any Anomalous Object: A Granular Video Anomaly Detection Pipeline</heading></a><br>
-      <u>Yuzhi Huang*</u>, Chenxin Li*, Haitao Zhang, Zixu Lin, Yunlong Lin, Hengyu Liu, Wuyang Li, Xinyu Liu, Jiechao Gao, Yue Huang, Xinghao Ding, Yixuan Yuan <br>
-      CVPR 2025 <br>
-      </p>
-
-      <div class="paper" id="TAO">
-      <a href="https://tao-25.github.io/">Project</a> |
-      <a href="papers/CVPR2025__TAO.pdf">Paper</a> |
-      <a href="javascript:toggleblock('TAO_abs')">Abstract</a> |
-      <a>Code</a>
-      
-
-      <p align="justify"> <i id="TAO_abs">
-        <!-- &nbsp;&nbsp;&nbsp;&nbsp;Vision-centric perception systems struggle with unpredictable and coupled weather degradations in the wild. Current solutions are often limited, as they either depend on specific degradation priors or suffer from significant domain gaps. To enable robust and operation in real-world conditions, we propose <strong><span style="color: rgb(32, 146, 228);">JarvisIR</span></strong>, a VLM-powered agent that leverages the VLM as a controller to manage multiple expert restoration models. To further enhance system robustness, reduce hallucinations, and improve generalizability in real-world adverse weather, JarvisIR employs a novel two-stage framework consisting of supervised fine-tuning and human feedback alignment. Specifically, to address the lack of paired data in real-world scenarios, the human feedback alignment enables the VLM to be fine-tuned effectively on large-scale real-world data in an unsupervised manner. To support the training and evaluation of JarvisIR, we introduce CleanBench, a comprehensive dataset consisting of high-quality and large-scale instruction-responses pairs, including 150K synthetic entries and 80K real entries. Extensive experiments demonstrate that JarvisIR exhibits superior decision-making and restoration capabilities. Compared with existing methods, it achieves a 50% improvement in the average of all perception metrics on CleanBench-Real. -->
-        &nbsp;&nbsp;&nbsp;&nbsp;Video anomaly detection (VAD) is crucial in scenarios such as surveillance and autonomous driving, where timely detection of unexpected activities is essential. Albeit existing methods have primarily focused on detecting anomalous objects in videos—either by identifying anomalous frames or objects—they often neglect finer-grained analysis, such as anomalous pixels, which limits their ability to capture a broader range of anomalies. To address this challenge, we propose an innovative VAD framework called Track Any Anomalous Object (<strong><span style="color: rgb(32, 146, 228);">TAO</span></strong>), which introduces a Granular Video Anomaly Detection Framework that, for the first time, integrates the detection of multiple fine-grained anomalous objects into a unified framework. Unlike methods that assign anomaly scores to every pixel at each moment, our approach transforms the problem into pixel-level tracking of anomalous objects. By linking anomaly scores to subsequent tasks such as image segmentation and video tracking, our method eliminates the need for threshold selection and achieves more precise anomaly localization, even in long and challenging video sequences. Experiments on extensive datasets demonstrate that <strong><span style="color: rgb(32, 146, 228);">TAO</span></strong>achieves state-of-the-art performance, setting a new progress for VAD by providing a practical, granular, and holistic solution.
-      </i></p>
-
-<!-- <pre xml:space="preserve">
-  @inproceedings{jarvisir2025,
-    title={JarvisIR: Elevating Autonomous Driving Perception with Intelligent Image Restoration},
-    author={Lin, Yunlong and Lin, Zixu and Chen, Haoyu and Pan, Panwang and Li, Chenxin and Chen, Sixiang and Huang, Yuzhi and Jin, Yeying and Li, Wenbo and Ding, Xinghao},
-    booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
-    year={2025}
-  }
-</pre> -->
-      </div>
-    </td>
-  </tr>
-
-
-
-
-
-
-
-
-
-
-
-
-  <tr>
-    <td width="40%" valign="top" align="center"><a class="project-preview" href="https://a-sa-m.github.io/" aria-label="Visit the ASAM project page">
-      <img src="images/ASAM/asam.png" alt="ASAM project preview">
-      <span class="venue-badge">NeurIPS 2024</span>
-    </a></td>
-    <td width="60%" valign="top">
-      <p><a href="https://a-sa-m.github.io/" id="ASAM">
-      <heading>Flaws can be Applause: Unleashing Potential of Segmenting Ambiguous Objects in SAM</heading></a><br>
-      Chenxin Li*, <u>Yuzhi Huang*</u>, Wuyang Li, Hengyu Liu, Xinyu Liu, Qing Xu, Zhen Chen, Yue Huang, Yixuan Yuan <br>
-      NeurIPS 2024 <br>
-      </p> 
-      <div class="paper" id="ASAM">
-      <a href="https://a-sa-m.github.io/">Project</a> |
-      <a href="https://openreview.net/pdf?id=vJSNsSFO95">Paper</a> |
-      <a href="javascript:toggleblock('javisir_abs')">Abstract</a> |
-      <a href="https://github.com/chenxinli001/a2sam">Code</a> 
-
-      <p align="justify"> <i id="ASAM_abs">
-        &nbsp;&nbsp;&nbsp;&nbsp;As the vision foundation models like the Segment Anything Model (SAM) demonstrate potent universality, they also present challenges in giving ambiguous and uncertain predictions. Significant variations in the model output and granularity can occur with simply subtle changes in the prompt, contradicting the consensus requirement for the robustness of a model. While some established works have been dedicated to stabilizing and fortifying the prediction of SAM, this paper takes a unique path to explore how this flaw can be inverted into an advantage when modeling inherently ambiguous data distributions. We introduce an optimization framework based on a conditional variational autoencoder, which jointly models the prompt and the granularity of the object with a latent probability distribution. This approach enables the model to adaptively perceive and represent the real ambiguous label distribution, taming SAM to produce a series of diverse, convincing, and reasonable segmentation outputs controllably. Extensive experiments on several practical deployment scenarios involving ambiguity demonstrates the exceptional performance of our framework.
-      </i></p>
-<!-- <pre xml:space="preserve">
-  @misc{fan2023lightgaussian, 
-    title={LightGaussian: Unbounded 3D Gaussian Compression with 15x Reduction and 200+ FPS}, 
-    author={Zhiwen Fan and Kevin Wang and Yuzhi Huang and Zehao Zhu and Dejia Xu and Zhangyang Wang}, 
-    year={2023},
-    eprint={2311.17245},
-    archivePrefix={arXiv},
-    primaryClass={cs.CV} 
-  }
-</pre> -->
-      </div>
-    </td>
-  </tr>
-
-  
-
-  <tr>
-    <td width="40%" valign="top" align="center"><a class="project-preview" href="https://p2-sam.github.io/" aria-label="Visit the P2SAM project page">
-      <img src="images/P2SAM/p2sam.png" alt="P2SAM project preview">
-      <span class="venue-badge">ACM MM 2024</span>
-    </a></td>
-    <td width="60%" valign="top">
-      <p><a href="https://p2-sam.github.io/" id="P2SAM">
-      <heading>P²SAM: Probabilistically Prompted SAMs Are Efficient Segmentator for Ambiguous Medical Images</heading></a><br>
-      <u>Yuzhi Huang*</u>, Chenxin Li*, Zixu Lin, Hengyu Liu, Haote Xu, Yifan Liu, Yue Huang, Xinghao Ding, Yixuan Yuan <br>
-      ACM MM 2024 <br>
-      </p>
-
-      <div class="paper" id="p2sam">
-      <a href="https://p2-sam.github.io/">Project</a> |
-      <a href="https://dl.acm.org/doi/pdf/10.1145/3664647.3680628">Paper</a> |
-      <a href="javascript:toggleblock('p2sam_abs')">Abstract</a> |
-      <a href="https://github.com/yu2hi13/P2SAM">Code</a> 
-
-      <p align="justify"> <i id="p2sam_abs">
-        &nbsp;&nbsp;&nbsp;&nbsp;The ability to generate an array of plausible outputs for a single input has profound implications for dealing with inherent ambiguity in visual scenarios. This is evident in scenarios where diverse semantic segmentation annotations for a single medical image are provided by various experts. Existing methods hinge on probabilistic modelling of representations to depict this ambiguity and rely on extensive multi-output annotated data to learn this probabilistic space.
-
-        However, these methods often falter when only a limited amount of ambiguously labelled data is available, which is a common occurrence in real-world applications. To surmount these challenges, we propose a novel framework, termed as (<strong><span style="color: rgb(32, 146, 228);">P²SAM</span></strong>), that leverages the prior knowledge of the Segment Anything Model (SAM) during the segmentation of ambiguous objects. Specifically, we delve into an inherent drawback of SAM in deterministic segmentation, i.e., the sensitivity of output to prompts, and ingeniously transform this into an advantage for ambiguous segmentation tasks by introducing a prior probabilistic space for prompts.
-        
-        Experimental results demonstrate that our strategy significantly enhances the precision and diversity of medical segmentation through the utilization of a small number of ambiguously annotated samples by doctors. Rigorous benchmarking experiments against state-of-the-art methods indicate that our method achieves superior segmentation precision and diversified outputs with fewer training data (using simply 5.5% samples, +12% Dmax).
-        
-        The (<strong><span style="color: rgb(32, 146, 228);">P²SAM</span></strong>) signifies a substantial step towards the practical deployment of probabilistic models in real-world scenarios with limited data.
-      </i></p>
-
-<!-- <pre xml:space="preserve">
-  @misc{fan2024largespatialmodelendtoend,
-    title={Large Spatial Model: End-to-end Unposed Images to Semantic 3D}, 
-    author={Zhiwen Fan and Jian Zhang and Wenyan Cong and Peihao Wang and Renjie Li and Yuzhi Huang and Shijie Zhou and Achuta Kadambi and Zhangyang Wang and Danfei Xu and Boris Ivanovic and Marco Pavone and Yue Wang},
-    year={2024},
-    eprint={2410.18956},
-    archivePrefix={arXiv},
-    primaryClass={cs.CV},
-    url={https://arxiv.org/abs/2410.18956}, 
-  }
-</pre> -->
-      </div>
-    </td>
-  </tr>
-
-
-
-
-
-
-
-
-
-
-
-
-<table width="100%" align="center" border="0" cellspacing="0" cellpadding="10">
-  <tr><td><sectionheading>Honors & Awards</sectionheading></td></tr>
-</table>
-<table width="100%" align="center" border="0" cellspacing="0" cellpadding="15">
-  <tr>
-    <td style="padding:20px;width:100%;vertical-align:middle">
-      Tsinghua Future Scholar Scholarship, 2026
-      <br>
-      National Scholarship, 2026
-      <br>
-      Outstanding Graduate, 2026
-      <br>
-      Huang Xilie University-Level Scholarship, 2025 
-      <br>
-      University Level Outstanding Student Award, 2024
-      <br>
-      Meritorious Winner in the Mathematical Contest in Modeling (MCM), USA, 2024
-      </p>
-    </td>
-  </tr>
-</table>
-
-
-
-<table width="100%" align="center" border="0" cellspacing="0" cellpadding="10">
-  <tr><td><sectionheading>Reviewer Services</sectionheading></td></tr>
-</table>
-<table width="100%" align="center" border="0" cellspacing="0" cellpadding="15">
-  <tr>
-    <td style="padding:20px;width:100%;vertical-align:middle">
-      International Conference on Machine Learning <b>(ICML)</b>, 2025
-      <br>
-      International Conference on Learning Representations <b>(ICLR)</b>, 2025
-      <br>
-      Conference on Neural Information Processing Systems <b>(NeurIPS)</b>, 2025, 2024
-      </p>
-    </td>
-  </tr>
-</table>
-
-<table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-  <tbody>
-      <tr>
-          <td style="padding:0px">
-              <br><br>
-              <div>
-                <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=bqvXDgMuKZCrCZYT2Wh6KGPxri2jjl9cxis6tO7DjI4&cl=ffffff&w=a"></script>
+          <article class="paper-box">
+            <div class="paper-box-image">
+              <a href="https://dyntrace.github.io/">
+                <span class="badge">ACM MM 2026</span>
+                <img src="images/dyntrace/DynTrace.png" alt="DynTrace method overview" loading="lazy">
+              </a>
+            </div>
+            <div class="paper-box-text">
+              <h2 class="paper-title"><a href="https://dyntrace.github.io/">DynTrace: Tracking Dynamic Object Evidence for 4D Spatio-Temporal Reasoning in MLLMs</a></h2>
+              <p class="paper-authors">Rongxin Gao*, <span class="me">Yuzhi Huang*†</span>, Dongxuan Liu*, Chu Li, Zhenye Wang, Jie Wu, Shuzhao Xie, Jingyan Jiang, Xinghao Ding, Xiaotong Tu, Yue Huang</p>
+              <p class="paper-venue">ACM MM 2026</p>
+              <div class="paper-links">
+                <a href="https://dyntrace.github.io/">Project Page</a>
+                <a class="rednote" href="https://www.xiaohongshu.com/explore/6a58ca35000000000e0357c1?app_platform=ios&amp;app_version=9.39&amp;share_from_user_hidden=true&amp;xsec_source=app_share&amp;type=normal&amp;xsec_token=CBrYv5UjnI1u0szznP-OHDqBiZshKhk0rLlmiTH01Izfs=&amp;author_share=1&amp;xhsshare=WeixinSession&amp;shareRedId=ODY3Qjc8SE82NzUyOTgwNjY0OTdGNUc-&amp;apptime=1785129774&amp;share_id=9723cc6b8f074c309eeec35ced6d76f9&amp;code=4zFJilK1AIq&amp;wechatWid=2336863facef690149819a98448918c2&amp;wechatOrigin=menu">小红书</a>
+                <a class="arxiv" href="https://arxiv.org/abs/2607.12503">arXiv</a>
+                <details>
+                  <summary>Abstract</summary>
+                  <p class="abstract">DynTrace is a training-free framework that tracks continuous dynamic object evidence for coherent 4D reasoning. It combines geometry-informed trajectory visualization with a structured Dynamic Trace Graph.</p>
+                </details>
               </div>
-          </td>
-      </tr>
-  </tbody>
-</table>
+              <p class="paper-description">- We introduce DynTrace, a training-free framework that enables MLLMs to continuously track dynamic object evidence for coherent 4D spatio-temporal reasoning. It combines geometry-informed Dynamic Trajectory Visualization with a structured Dynamic Trace Graph to disentangle genuine object dynamics from camera-induced motion and preserve evolving object-level cues across time.</p>
+            </div>
+          </article>
 
+          <article class="paper-box">
+            <div class="paper-box-image">
+              <a href="https://robostream123.github.io/">
+                <span class="badge">ECCV 2026</span>
+                <video autoplay muted loop playsinline preload="metadata" poster="images/RoboStream/Overview.png">
+                  <source src="images/RoboStream/RoboStream-preview.mp4" type="video/mp4">
+                </video>
+              </a>
+            </div>
+            <div class="paper-box-text">
+              <h2 class="paper-title"><a href="https://robostream123.github.io/">RoboStream: Weaving Spatio-Temporal Reasoning with Memory in Vision-Language Models for Robotics</a></h2>
+              <p class="paper-authors"><span class="me">Yuzhi Huang*†</span>, Jie Wu*, Weijue Bu, Ziyi Xiong, Gaoyang Jiang, Ye Li, Kangye Ji, Shuzhao Xie, Yue Huang, Chenglei Wu, Jingyan Jiang, Zhi Wang</p>
+              <p class="paper-venue">ECCV 2026</p>
+              <div class="paper-links">
+                <a href="https://robostream123.github.io/">Project Page</a>
+                <a class="rednote" href="https://www.xiaohongshu.com/explore/6a58934c000000001c013d2b?app_platform=ios&amp;app_version=9.39&amp;share_from_user_hidden=true&amp;xsec_source=app_share&amp;type=normal&amp;xsec_token=CBrYv5UjnI1u0szznP-OHDqJqqQ9LVKR5lKIqNCEHSsN0=&amp;author_share=1&amp;xhsshare=WeixinSession&amp;shareRedId=ODY3Qjc8SE82NzUyOTgwNjY0OTdGNUc-&amp;apptime=1785129781&amp;share_id=558203cd43084aa0a5178e5de9b614e3&amp;code=9P2KMx0MEjH&amp;wechatWid=2336863facef690149819a98448918c2&amp;wechatOrigin=menu">小红书</a>
+                <a class="arxiv" href="https://arxiv.org/abs/2603.12939">arXiv</a>
+                <details>
+                  <summary>Abstract</summary>
+                  <p class="abstract">RoboStream weaves spatio-temporal reasoning with persistent memory into VLM robotic planners, supporting long-horizon object grounding and causal state tracking.</p>
+                </details>
+              </div>
+              <p class="paper-description">- We propose RoboStream, a training-free framework that equips VLM-based robotic planners with persistent spatio-temporal memory for long-horizon manipulation. Spatio-Temporal Fusion Tokens maintain object grounding, while a Causal Spatio-Temporal Graph records action-triggered state transitions, achieving 90.5% on long-horizon RLBench and 44.4% on challenging real-world block-building tasks.</p>
+            </div>
+          </article>
 
+          <article class="paper-box">
+            <div class="paper-box-image">
+              <a href="https://zipvggt.github.io/">
+                <span class="badge preprint">Preprint</span>
+                <img src="images/zipvggt/Zip-VGGT.png" alt="Zip-VGGT project overview" loading="lazy">
+              </a>
+            </div>
+            <div class="paper-box-text">
+              <h2 class="paper-title"><a href="https://zipvggt.github.io/">Zip-VGGT: Object-Centric Spatiotemporal KV Compression for Streaming Vision Transformers</a></h2>
+              <p class="paper-authors">Kairun Wen†, Runyu Chen, Wenyan Cong, Peiwei Lin, Tao Lu, Lihan Jiang, Weiguang Zhao, Junting Dong, Yunlong Lin, <span class="me">Yuzhi Huang</span>, Xinghao Ding, Hongsheng Li, Linning Xu, Mulin Yu</p>
+              <p class="paper-venue">Preprint</p>
+              <div class="paper-links">
+                <a href="https://zipvggt.github.io/">Project Page</a>
+                <details>
+                  <summary>Abstract</summary>
+                  <p class="abstract">Zip-VGGT introduces object-centric spatiotemporal KV compression for streaming vision, preserving geometric topology and dynamic trajectories while controlling long-term memory use.</p>
+                </details>
+              </div>
+              <p class="paper-description">- Object-centric cache compression for efficient long-term 4D reconstruction.</p>
+            </div>
+          </article>
 
+          <article class="paper-box">
+            <div class="paper-box-image">
+              <a href="https://dyn-bench.github.io/">
+                <span class="badge">CVPR 2026</span>
+                <img src="images/dynbench/Dynbench-teaser.png" alt="Dyn-Bench teaser" loading="lazy">
+              </a>
+            </div>
+            <div class="paper-box-text">
+              <h2 class="paper-title"><a href="https://dyn-bench.github.io/">Thinking in Dynamics: How Multimodal Large Language Models Perceive, Track, and Reason Dynamics in Physical 4D World</a></h2>
+              <p class="paper-authors"><span class="me">Yuzhi Huang*†</span>, Kairun Wen*, Rongxin Gao*, Dongxuan Liu, Yibin Lou, Jie Wu, Jing Xu, Jian Zhang, Zheng Yang, Yunlong Lin, Chenxin Li, Panwang Pan, Junbin Lu, Jingyan Jiang, Xinghao Ding, Yue Huang, Zhi Wang</p>
+              <p class="paper-venue">
+                <strong>CVPR 2026 Main Conference</strong>
+                <span class="workshop-venue"><a href="https://datamfm.github.io/">CVPR 2026 DataMFM Workshop</a> — Oral Presentation</span>
+                <span class="workshop-venue"><a href="https://4dvisionworkshop.github.io/">CVPR 2026 4D Vision Workshop</a></span>
+              </p>
+              <div class="paper-links">
+                <a href="https://dyn-bench.github.io/">Project Page</a>
+                <a href="https://arxiv.org/abs/2512.00300">arXiv</a>
+                <a class="code" href="https://github.com/Dynamics-X/Thinking-in-Dynamics">Code</a>
+                <a class="code" href="https://huggingface.co/datasets/yu2hi13/Dyn-Bench">Data</a>
+                <details>
+                  <summary>Abstract</summary>
+                  <p class="abstract">Dyn-Bench evaluates whether MLLMs can perceive, track, and reason about evolving 4D scenes using 1K videos, 7K VQA pairs, and 3K dynamic-object grounding pairs.</p>
+                </details>
+              </div>
+              <p class="paper-description">- We introduce Dyn-Bench, a large-scale benchmark for systematically evaluating how MLLMs perceive, track, and reason about dynamics in the physical 4D world. It contains 1K diverse videos, 7K visual question-answering pairs, and 3K dynamic-object grounding pairs, revealing that existing models struggle to maintain both strong spatio-temporal reasoning and precise localized grounding. We further study structured integration strategies, including Mask-Guided Fusion and Spatio-Temporal Textual Cognitive Maps, to improve dynamic-world understanding.</p>
+            </div>
+          </article>
 
+          <article class="paper-box">
+            <div class="paper-box-image">
+              <a href="https://dynamic-verse.github.io/">
+                <span class="badge">NeurIPS 2025</span>
+                <video autoplay muted loop playsinline preload="metadata">
+                  <source src="images/dynamic_verse/DynamicVerse-preview.mp4" type="video/mp4">
+                </video>
+              </a>
+            </div>
+            <div class="paper-box-text">
+              <h2 class="paper-title"><a href="https://dynamic-verse.github.io/">DynamicVerse: Physically-Aware Multimodal Modeling for Dynamic 4D Worlds</a></h2>
+              <p class="paper-authors">Kairun Wen*, <span class="me">Yuzhi Huang*</span>, Runyu Chen, Hui Zheng, Yunlong Lin, Panwang Pan, Chenxin Li, Wenyan Cong, Jian Zhang, Junbin Lu, Chenguo Lin, Dilin Wang, Zhicheng Yan, Hongyu Xu, Justin Theiss, Yue Huang, Xinghao Ding, Rakesh Ranjan, Zhiwen Fan</p>
+              <p class="paper-venue">NeurIPS 2025</p>
+              <div class="paper-links">
+                <a href="https://dynamic-verse.github.io/">Project Page</a>
+                <a class="arxiv" href="https://arxiv.org/abs/2512.03000">arXiv</a>
+                <details>
+                  <summary>Abstract</summary>
+                  <p class="abstract">DynamicVerse is a physical-scale multimodal 4D modeling framework for real-world video, combining metric geometry, motion, masks, and descriptive captions.</p>
+                </details>
+              </div>
+              <p class="paper-description">- We present DynamicVerse, a physically-aware multimodal 4D modeling framework that recovers metric-scale geometry, real-world motion, instance masks, and descriptive captions from monocular Internet videos. DynamicVerse provides a large-scale resource of 100K+ videos, 800K+ annotated masks, and 10M+ frames for learning and evaluating dynamic-world understanding.</p>
+            </div>
+          </article>
 
+          <article class="paper-box">
+            <div class="paper-box-image">
+              <a href="https://tao-25.github.io/">
+                <span class="badge">CVPR 2025</span>
+                <img src="images/TAO/TAO.png" alt="Track Any Anomalous Object overview" loading="lazy">
+              </a>
+            </div>
+            <div class="paper-box-text">
+              <h2 class="paper-title"><a href="https://tao-25.github.io/">Track Any Anomalous Object: A Granular Video Anomaly Detection Pipeline</a></h2>
+              <p class="paper-authors"><span class="me">Yuzhi Huang*</span>, Chenxin Li*, Haitao Zhang, Zixu Lin, Yunlong Lin, Hengyu Liu, Wuyang Li, Xinyu Liu, Jiechao Gao, Yue Huang, Xinghao Ding, Yixuan Yuan</p>
+              <p class="paper-venue">CVPR 2025</p>
+              <div class="paper-links">
+                <a href="https://tao-25.github.io/">Project Page</a>
+                <a href="papers/CVPR2025__TAO.pdf">Paper</a>
+                <details>
+                  <summary>Abstract</summary>
+                  <p class="abstract">TAO reframes granular video anomaly detection as pixel-level tracking of anomalous objects, linking anomaly scoring with segmentation and tracking for precise long-video localization.</p>
+                </details>
+              </div>
+              <p class="paper-description">- A unified pipeline for detecting and tracking multiple fine-grained anomalous objects.</p>
+            </div>
+          </article>
 
+          <article class="paper-box">
+            <div class="paper-box-image">
+              <a href="https://a-sa-m.github.io/">
+                <span class="badge">NeurIPS 2024</span>
+                <img src="images/ASAM/asam.png" alt="ASAM method overview" loading="lazy">
+              </a>
+            </div>
+            <div class="paper-box-text">
+              <h2 class="paper-title"><a href="https://a-sa-m.github.io/">Flaws can be Applause: Unleashing Potential of Segmenting Ambiguous Objects in SAM</a></h2>
+              <p class="paper-authors">Chenxin Li*, <span class="me">Yuzhi Huang*</span>, Wuyang Li, Hengyu Liu, Xinyu Liu, Qing Xu, Zhen Chen, Yue Huang, Yixuan Yuan</p>
+              <p class="paper-venue">NeurIPS 2024</p>
+              <div class="paper-links">
+                <a href="https://a-sa-m.github.io/">Project Page</a>
+                <a href="https://openreview.net/pdf?id=vJSNsSFO95">Paper</a>
+                <a class="code" href="https://github.com/chenxinli001/a2sam">Code</a>
+                <details>
+                  <summary>Abstract</summary>
+                  <p class="abstract">This work turns SAM's prompt sensitivity into an advantage for ambiguous segmentation, enabling diverse, plausible, and controllable predictions.</p>
+                </details>
+              </div>
+              <p class="paper-description">- We model prompts and object granularity with a latent probability distribution.</p>
+            </div>
+          </article>
 
-<hr/>
+          <article class="paper-box">
+            <div class="paper-box-image">
+              <a href="https://p2-sam.github.io/">
+                <span class="badge">ACM MM 2024</span>
+                <img src="images/P2SAM/p2sam.png" alt="P squared SAM overview" loading="lazy">
+              </a>
+            </div>
+            <div class="paper-box-text">
+              <h2 class="paper-title"><a href="https://p2-sam.github.io/">P²SAM: Probabilistically Prompted SAMs Are Efficient Segmentators for Ambiguous Medical Images</a></h2>
+              <p class="paper-authors"><span class="me">Yuzhi Huang*</span>, Chenxin Li*, Zixu Lin, Hengyu Liu, Haote Xu, Yifan Liu, Yue Huang, Xinghao Ding, Yixuan Yuan</p>
+              <p class="paper-venue">ACM MM 2024</p>
+              <div class="paper-links">
+                <a href="https://p2-sam.github.io/">Project Page</a>
+                <a href="https://dl.acm.org/doi/pdf/10.1145/3664647.3680628">Paper</a>
+                <a class="code" href="https://github.com/yu2hi13/P2SAM">Code</a>
+                <details>
+                  <summary>Abstract</summary>
+                  <p class="abstract">P²SAM models ambiguous medical-image segmentation through a probabilistic prompt space built on SAM, improving accuracy and diversity with limited annotations.</p>
+                </details>
+              </div>
+              <p class="paper-description">- Probabilistic prompting turns SAM into an efficient model for ambiguous medical segmentation.</p>
+            </div>
+          </article>
+        </section>
 
-<table width="100%" align="center" border="0" cellspacing="0" cellpadding="2">
-    <tr><td><br><p align="right">
-    Website template from <a href="http://www.cs.berkeley.edu/~barron/">here</a> and <a href="https://tairanhe.com/">here</a>
-    </font></p></td></tr>
-</table>
+        <section id="honors">
+          <h1 class="section-title">🏆 Honors and Awards</h1>
+          <ul class="plain-list">
+            <li>
+              <a class="honor-link" href="https://mp.weixin.qq.com/s/oOqGxVULSwP5Uy_Cv5WItg">Tsinghua Future Scholar Scholarship</a>, 2026
+              <span class="honor-note">Selective university-level fellowship for academic Ph.D. students; four recipients from Tsinghua SIGS in 2026.</span>
+            </li>
+            <li>National Scholarship, 2026</li>
+            <li>Outstanding Graduate, 2026</li>
+            <li>Huang Xilie University-Level Scholarship, 2025</li>
+            <li>University Level Outstanding Student Award, 2024</li>
+            <li>Meritorious Winner in the Mathematical Contest in Modeling (MCM), USA, 2024</li>
+          </ul>
+        </section>
 
-  </td></tr>
-</table>
-<script xml:space="preserve" language="JavaScript">
-hideallbibs();
-</script>
-<script xml:space="preserve" language="JavaScript">
-  hideblock('material_review_abs');
-</script>
-<script xml:space="preserve" language="JavaScript">
-  hideblock('ieee_iot_abs');
-</script>
-<script xml:space="preserve" language="JavaScript">
-  hideblock('acm_turc_abs');
-</script>
-<script xml:space="preserve" language="JavaScript">
-  hideblock('aog_mcts_abs');
-</script>
-<script xml:space="preserve" language="JavaScript">
-  hideblock('pragmatics_marl_abs');
-</script>
-<script xml:space="preserve" language="JavaScript">
-  hideblock('collab_marl_abs');
-</script>
-<script xml:space="preserve" language="JavaScript">
-  hideblock('rma_abs');
-</script>
-<script xml:space="preserve" language="JavaScript">
-  hideblock('energyloco_abs');
-</script>
-<script xml:space="preserve" language="JavaScript">
-  hideblock('navloco_abs');
-</script>
-<script xml:space="preserve" language="JavaScript">
-  hideblock('lsm_abs');
-</script>
-<script xml:space="preserve" language="JavaScript">
-  hideblock('lightgaussian_abs');
-</script>
-<script xml:space="preserve" language="JavaScript">
-  hideblock('instantsplat_abs');
-</script>
-<script xml:space="preserve" language="JavaScript">
-  hideblock('sam3r_abs');
-</script>
-<script xml:space="preserve" language="JavaScript">
-  hideblock('dplut_abs');
-</script>
-<script xml:space="preserve" language="JavaScript">
-  hideblock('javisir_abs');
-</script>
-<script xml:space="preserve" language="JavaScript">
-  hideblock('agile-but-safe_abs');
-</script>
-<script xml:space="preserve" language="JavaScript">
-  hideblock('safedpa_abs');
-</script>
-<script xml:space="preserve" language="JavaScript">
-  hideblock('acs_abs');
-</script>
-<script xml:space="preserve" language="JavaScript">
-  hideblock('saferl_survey_abs');
-</script>
-<script xml:space="preserve" language="JavaScript">
-  hideblock('patchail_abs');
-</script>
-<script xml:space="preserve" language="JavaScript">
-  hideblock('sisos_abs');
-</script>
-<script xml:space="preserve" language="JavaScript">
-  hideblock('uaissa_abs');
-</script>
-<script xml:space="preserve" language="JavaScript">
-  hideblock('autocost_abs');
-</script>
-<script xml:space="preserve" language="JavaScript">
-  hideblock('a2ls_abs');
-</script>
-<script xml:space="preserve" language="JavaScript">
-  hideblock('issa_abs');
-</script>
-<script xml:space="preserve" language="JavaScript">
-  hideblock('ebil_abs');
-</script>
-</script>
-<script xml:space="preserve" language="JavaScript">
-  hideblock('maniploco_abs');
-</script>
-<script xml:space="preserve" language="JavaScript">
-  hideblock('parkour_abs');
-</script>
-<script xml:space="preserve" language="JavaScript">
-  hideblock('mobile_aloha_abs');
-</script>
-<script xml:space="preserve" language="JavaScript">
-  hideblock('dyntrace_abs');
-</script>
-<script xml:space="preserve" language="JavaScript">
-  hideblock('robostream_abs');
-</script>
-<script xml:space="preserve" language="JavaScript">
-  hideblock('zipvggt_abs');
-</script>
-<script xml:space="preserve" language="JavaScript">
-  hideblock('dynamicbench_abs');
-</script>
-<script xml:space="preserve" language="JavaScript">
-  hideblock('DynamicVerse_abs');
-</script>
-<script xml:space="preserve" language="JavaScript">
-  hideblock('TAO_abs');
-</script>
-<script xml:space="preserve" language="JavaScript">
-  hideblock('p2sam_abs');
-</script>
-<script xml:space="preserve" language="JavaScript">
-  hideblock('ASAM_abs');
-</script>
+        <section id="educations">
+          <h1 class="section-title">🎓 Educations</h1>
+          <ul class="education-list">
+            <li><em>2026 - (now)</em>, PhD, MMLab@SIGS, Tsinghua Shenzhen International Graduate School, Shenzhen.</li>
+            <li><em>2023 - 2026</em>, Master, School of Informatics, Xiamen University, Xiamen.</li>
+            <li><em>2019 - 2023</em>, Undergraduate, Fujian Normal University, Fuzhou.</li>
+          </ul>
+        </section>
+
+        <section id="internships">
+          <h1 class="section-title">💼 Internships</h1>
+          <article class="internship-item">
+            <h2>YXGN Robotics <span lang="zh-CN">(远行光年)</span></h2>
+            <p class="internship-role">Core Algorithm Member (Intern) · Embodied-AI startup incubated by our research group</p>
+            <div class="internship-meta">
+              <span>📍 Shenzhen, China</span>
+              <time>Oct 2025 – Mar 2026</time>
+            </div>
+          </article>
+        </section>
+
+        <section id="service">
+          <h1 class="section-title">📚 Academic Services</h1>
+          <ul class="plain-list">
+            <li>AAAI Conference on Artificial Intelligence (<strong>AAAI</strong>), Program Committee Member, 2026</li>
+            <li>International Conference on Machine Learning (<strong>ICML</strong>), 2025</li>
+            <li>International Conference on Learning Representations (<strong>ICLR</strong>), 2025</li>
+            <li>Conference on Neural Information Processing Systems (<strong>NeurIPS</strong>), 2025, 2024</li>
+          </ul>
+        </section>
+
+        <footer class="site-footer">
+          Template style adapted from <a href="https://hanyangyu1021.github.io/">Hanyang Yu's homepage</a>.
+        </footer>
+      </div>
+    </main>
+  </div>
 </body>
-
 </html>

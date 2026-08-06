@@ -371,6 +371,10 @@ p {
   box-shadow: 3px 3px 6px #aaa;
 }
 
+.paper-box-image .paper-preview-contain {
+  object-fit: contain;
+}
+
 .badge {
   position: absolute;
   top: 8px;

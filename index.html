@@ -108,6 +108,7 @@
             <div class="research-group">
               <h2>Embodied AI &amp; Robotic Agents</h2>
               <ul>
+                <li><strong>Cross-query execution state for long-horizon VLA manipulation:</strong> <a href="https://muqy1818.github.io/chainvla-web/">ChainVLA</a></li>
                 <li><strong>Long-horizon robotic manipulation and VLM-based planning:</strong> <a href="https://robostream123.github.io/">RoboStream</a></li>
               </ul>
             </div>
@@ -143,6 +144,7 @@
         <section id="news">
           <h1 class="section-title">🔥 News</h1>
           <ul class="news-list">
+            <li><em>2026.08</em>: &nbsp;🎉 <strong><a href="https://muqy1818.github.io/chainvla-web/">ChainVLA</a></strong> was released as a preprint.</li>
             <li><em>2026.07</em>: &nbsp;🎉 Two papers were accepted at <strong>ACM MM 2026</strong>!</li>
             <li><em>2026.06</em>: &nbsp;🎉 <strong>Thinking in Dynamics</strong> was selected for an <strong>oral presentation</strong> at the <a href="https://datamfm.github.io/">CVPR 2026 DataMFM Workshop</a> and was also accepted to the <a href="https://4dvisionworkshop.github.io/">CVPR 2026 4D Vision Workshop</a>.</li>
             <li><em>2026.06</em>: &nbsp;🎉 Awarded the <strong><a href="https://mp.weixin.qq.com/s/oOqGxVULSwP5Uy_Cv5WItg">Tsinghua Future Scholar Scholarship</a></strong>, a highly selective university-level fellowship recognizing academic potential; only four students from Tsinghua SIGS were selected in 2026.</li>
@@ -158,6 +160,30 @@
         <section id="publications">
           <h1 class="section-title">📝 Publications</h1>
           <p class="publication-note">* denotes equal contribution, † denotes project lead.</p>
+
+          <article class="paper-box">
+            <div class="paper-box-image">
+              <a href="https://muqy1818.github.io/chainvla-web/">
+                <span class="badge preprint">Preprint</span>
+                <img class="paper-preview-contain" src="images/ChainVLA/ChainVLA-teaser.png" alt="ChainVLA execution-state overview for long-horizon manipulation" loading="lazy">
+              </a>
+            </div>
+            <div class="paper-box-text">
+              <h2 class="paper-title"><a href="https://muqy1818.github.io/chainvla-web/">ChainVLA: Chaining Vision-Language-Action Queries through a Unified Execution State for Long-Horizon Manipulation</a></h2>
+              <p class="paper-authors"><span class="me">Yuzhi Huang*</span>, Weijue Bu*, Ziyi Xiong, Jie Wu, Fanding Huang, Jingyan Jiang, Zhi Wang</p>
+              <p class="paper-venue">Preprint, 2026</p>
+              <div class="paper-links">
+                <a href="https://muqy1818.github.io/chainvla-web/">Project Page</a>
+                <a class="rednote" href="https://www.xiaohongshu.com/explore/6a744941000000002500ee6d?xsec_token=CBN26KSGgqM3pVD-9wDa5br8ZorMWng1qteCLUoMDionc=&amp;xsec_source=app_share">小红书</a>
+                <a class="arxiv" href="https://arxiv.org/abs/2608.02326">arXiv</a>
+                <details>
+                  <summary>Abstract</summary>
+                  <p class="abstract">ChainVLA is a 1.2B-parameter VLA policy that connects successive action queries through a joint, revisable execution state, carrying both task progress and unfinished motion across long-horizon manipulation.</p>
+                </details>
+              </div>
+              <p class="paper-description">- We introduce ChainVLA, which combines Progress Context with Motion Tail to preserve observation-derived task progress and the preceding prediction's unexecuted continuation across VLA queries. ChainVLA reaches 62.8% average success on RMBench and 98.8% across four LIBERO suites.</p>
+            </div>
+          </article>
 
           <article class="paper-box">
             <div class="paper-box-image">

@@ -132,6 +132,7 @@
             <div class="research-group">
               <h2>Vision Foundation Models for Robust Perception</h2>
               <ul>
+                <li><strong>Track-centric anomaly understanding:</strong> <a href="https://yarkupa.github.io/tau-bench.github.io/">TAU-Bench</a></li>
                 <li><strong>Granular video anomaly detection:</strong> <a href="https://tao-25.github.io/">Track Any Anomalous Object</a></li>
                 <li><strong>Ambiguity-aware segmentation with SAM:</strong> <a href="https://a-sa-m.github.io/">ASAM</a>, <a href="https://p2-sam.github.io/">P²SAM</a></li>
               </ul>
@@ -144,7 +145,7 @@
         <section id="news">
           <h1 class="section-title">🔥 News</h1>
           <ul class="news-list">
-            <li><em>2026.08</em>: &nbsp;🎉 <strong><a href="https://muqy1818.github.io/chainvla-web/">ChainVLA</a></strong> was released as a preprint.</li>
+            <li><em>2026.08</em>: &nbsp;🎉 <strong><a href="https://yarkupa.github.io/tau-bench.github.io/">TAU-Bench</a></strong> and <strong><a href="https://muqy1818.github.io/chainvla-web/">ChainVLA</a></strong> were released as preprints.</li>
             <li><em>2026.07</em>: &nbsp;🎉 Two papers were accepted at <strong>ACM MM 2026</strong>!</li>
             <li><em>2026.06</em>: &nbsp;🎉 <strong>Thinking in Dynamics</strong> was selected for an <strong>oral presentation</strong> at the <a href="https://datamfm.github.io/">CVPR 2026 DataMFM Workshop</a> and was also accepted to the <a href="https://4dvisionworkshop.github.io/">CVPR 2026 4D Vision Workshop</a>.</li>
             <li><em>2026.06</em>: &nbsp;🎉 Awarded the <strong><a href="https://mp.weixin.qq.com/s/oOqGxVULSwP5Uy_Cv5WItg">Tsinghua Future Scholar Scholarship</a></strong>, a highly selective university-level fellowship recognizing academic potential; only four students from Tsinghua SIGS were selected in 2026.</li>
@@ -159,13 +160,36 @@
 
         <section id="publications">
           <h1 class="section-title">📝 Publications</h1>
-          <p class="publication-note">* denotes equal contribution, † denotes project lead.</p>
+          <p class="publication-note">* denotes equal contribution, † denotes corresponding author or project lead.</p>
+
+          <article class="paper-box">
+            <div class="paper-box-image">
+              <a href="https://yarkupa.github.io/tau-bench.github.io/">
+                <span class="badge preprint">Preprint</span>
+                <img class="paper-preview-wide" src="images/TAU-Bench/TAU-Bench-overview.png" alt="TAU-Bench overview connecting anomaly instance tracking with fine-grained video anomaly understanding" loading="lazy">
+              </a>
+            </div>
+            <div class="paper-box-text">
+              <h2 class="paper-title"><a href="https://yarkupa.github.io/tau-bench.github.io/">TAU-Bench: From Anomaly Instance Tracking to Fine-Grained Video Anomaly Understanding</a></h2>
+              <p class="paper-authors">Kepeng Yang*, Dongxuan Liu*, Rongxin Gao*, Zixin Su, Rui Wu, Shuzhao Xie, Chenxin Li, Panwang Pan, <span class="me">Yuzhi Huang†</span>, Yue Huang†, Jingyan Jiang</p>
+              <p class="paper-venue">Preprint, 2026</p>
+              <div class="paper-links">
+                <a href="https://yarkupa.github.io/tau-bench.github.io/">Project Page</a>
+                <a class="arxiv" href="https://arxiv.org/abs/2608.05699">arXiv</a>
+                <details>
+                  <summary>Abstract</summary>
+                  <p class="abstract">TAU-Bench is a track-centric benchmark for jointly evaluating anomaly instance tracking and fine-grained video anomaly understanding.</p>
+                </details>
+              </div>
+              <p class="paper-description">- We introduce TAU-Bench, which grounds fine-grained anomaly understanding in identity-consistent instance tracks. It comprises 1,118 videos, 1,454 anomaly tracks, and 202,438 pixel-level masks across 49 event and 45 scene categories.</p>
+            </div>
+          </article>
 
           <article class="paper-box">
             <div class="paper-box-image">
               <a href="https://muqy1818.github.io/chainvla-web/">
                 <span class="badge preprint">Preprint</span>
-                <img class="paper-preview-contain" src="images/ChainVLA/ChainVLA-teaser.png" alt="ChainVLA execution-state overview for long-horizon manipulation" loading="lazy">
+                <img class="paper-preview-wide" src="images/ChainVLA/ChainVLA-teaser.png" alt="ChainVLA execution-state overview for long-horizon manipulation" loading="lazy">
               </a>
             </div>
             <div class="paper-box-text">

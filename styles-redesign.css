@@ -581,15 +581,6 @@ p {
   font-size: 13px;
 }
 
-.site-footer {
-  margin-top: 52px;
-  padding-top: 20px;
-  color: var(--muted);
-  border-top: 1px solid var(--line);
-  font-size: 12px;
-  text-align: right;
-}
-
 @media (max-width: 940px) {
   .visible-links {
     gap: 16px;

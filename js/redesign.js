@@ -41,12 +41,66 @@
     ? [...publicationSection.querySelectorAll(".paper-box[data-publication-category]")]
     : [];
 
+  publicationPapers.forEach((paper, index) => {
+    const authors = paper.querySelector(".paper-authors");
+    const self = authors?.querySelector(".me");
+    if (!authors || !self) return;
+
+    const preceding = document.createRange();
+    preceding.setStart(authors, 0);
+    preceding.setEndBefore(self);
+    const firstAuthor = !preceding.toString().replace(/[,;\s&]+/g, "");
+    const leadAuthor = firstAuthor || /[*†]/.test(self.textContent);
+    paper.classList.toggle("paper-box--collaboration", !leadAuthor);
+
+    const tokens = authors.innerHTML.trim().split(/,\s*/);
+    const compact = [];
+    let omitted = false;
+    tokens.forEach((token, authorIndex) => {
+      const author = document.createElement("span");
+      author.innerHTML = token;
+      const keep = authorIndex === 0 || authorIndex === tokens.length - 1 ||
+        author.querySelector(".me") || /[*†]/.test(author.textContent);
+      if (keep) {
+        if (omitted) compact.push('<span class="authors-ellipsis">…</span>');
+        compact.push(token);
+        omitted = false;
+      } else {
+        omitted = true;
+      }
+    });
+    if (!compact.some((token) => token.includes("authors-ellipsis"))) return;
+
+    const fullList = document.createElement("span");
+    fullList.id = `paper-authors-${index + 1}`;
+    fullList.innerHTML = authors.innerHTML;
+    fullList.hidden = true;
+    const shortList = document.createElement("span");
+    shortList.innerHTML = compact.join(", ");
+    const toggle = document.createElement("button");
+    toggle.type = "button";
+    toggle.className = "paper-authors-toggle";
+    toggle.textContent = "All authors";
+    toggle.setAttribute("aria-expanded", "false");
+    toggle.setAttribute("aria-controls", fullList.id);
+    toggle.setAttribute("aria-label", `Show all authors of ${paper.querySelector(".paper-title").textContent}`);
+    toggle.addEventListener("click", () => {
+      const expanded = toggle.getAttribute("aria-expanded") !== "true";
+      fullList.hidden = !expanded;
+      shortList.hidden = expanded;
+      toggle.setAttribute("aria-expanded", String(expanded));
+      toggle.textContent = expanded ? "Fewer authors" : "All authors";
+      toggle.setAttribute("aria-label", `${expanded ? "Collapse" : "Show"} all authors of ${paper.querySelector(".paper-title").textContent}`);
+    });
+    authors.replaceChildren(shortList, fullList, document.createTextNode(" "), toggle);
+  });
+
   if (publicationSection && publicationPapers.length) {
     const categories = [
       {
         key: "long-horizon-embodied",
         title: "Long-Horizon Embodied Intelligence",
-        description: "Persistent execution state and spatio-temporal memory for long-horizon manipulation",
+        description: "Robot-use evaluation, adaptive execution horizons, and persistent memory for manipulation",
       },
       {
         key: "dynamic-worlds",
@@ -72,6 +126,10 @@
     categories.forEach((category, index) => {
       const papers = publicationPapers.filter(
         (paper) => paper.dataset.publicationCategory === category.key
+      );
+      papers.sort((a, b) =>
+        Number(a.classList.contains("paper-box--collaboration")) -
+        Number(b.classList.contains("paper-box--collaboration"))
       );
       if (!papers.length) return;
 

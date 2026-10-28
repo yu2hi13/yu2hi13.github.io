@@ -6,7 +6,7 @@
   <meta name="description" content="Yuzhi Huang — Ph.D. student working on embodied AI, 4D world modeling, multimodal reasoning, and vision foundation models.">
   <title>Yuzhi Huang</title>
   <link rel="icon" type="image/png" sizes="64x64" href="images/favicon.png">
-  <link rel="stylesheet" href="styles-redesign.css">
+  <link rel="stylesheet" href="styles-redesign.css?v=20261028-2">
   <script src="js/redesign.js" defer></script>
 </head>
 <body>
@@ -40,7 +40,7 @@
 
         <div class="author__content">
           <h1 class="author__name">Yuzhi Huang · 黄誉之</h1>
-          <p class="author__bio">Tsinghua Shenzhen International Graduate School, Xiamen University</p>
+          <p class="author__bio">Tsinghua Shenzhen International Graduate School</p>
         </div>
 
         <div class="author__urls-wrapper">
@@ -108,6 +108,8 @@
             <div class="research-group">
               <h2>Embodied AI &amp; Robotic Agents</h2>
               <ul>
+                <li><strong>Benchmarking multimodal agents for robot use:</strong> <a href="https://robotworldai.github.io/">RobotWorld</a></li>
+                <li><strong>Adaptive execution horizons for robot policies:</strong> <a href="https://hf618.github.io/ChunkTrust.github.io/">ChunkTrust</a></li>
                 <li><strong>Cross-query execution state for long-horizon VLA manipulation:</strong> <a href="https://muqy1818.github.io/chainvla-web/">ChainVLA</a></li>
                 <li><strong>Long-horizon robotic manipulation and VLM-based planning:</strong> <a href="https://robostream123.github.io/">RoboStream</a></li>
               </ul>
@@ -145,6 +147,8 @@
         <section id="news">
           <h1 class="section-title">🔥 News</h1>
           <ul class="news-list">
+            <li><em>2026.10</em>: &nbsp;🎉 <strong><a href="https://robotworldai.github.io/">RobotWorld</a></strong> was released as a preprint, benchmarking multimodal agents for robot use.</li>
+            <li><em>2026.09</em>: &nbsp;🎉 <strong><a href="https://hf618.github.io/ChunkTrust.github.io/">ChunkTrust</a></strong> was released as a preprint on adaptive execution horizons for robot policies.</li>
             <li><em>2026.08</em>: &nbsp;🎉 <strong><a href="https://yarkupa.github.io/tau-bench.github.io/">TAU-Bench</a></strong> and <strong><a href="https://muqy1818.github.io/chainvla-web/">ChainVLA</a></strong> were released as preprints.</li>
             <li><em>2026.07</em>: &nbsp;🎉 Two papers were accepted at <strong>ACM MM 2026</strong>!</li>
             <li><em>2026.06</em>: &nbsp;🎉 <strong>Thinking in Dynamics</strong> was selected for an <strong>oral presentation</strong> at the <a href="https://datamfm.github.io/">CVPR 2026 DataMFM Workshop</a> and was also accepted to the <a href="https://4dvisionworkshop.github.io/">CVPR 2026 4D Vision Workshop</a>.</li>
@@ -166,7 +170,7 @@
             <a href="#pub-long-horizon-embodied">
               <span class="publication-category-index">01</span>
               <span class="publication-category-label">Long-Horizon Embodied Intelligence</span>
-              <span class="publication-category-count">2 papers</span>
+              <span class="publication-category-count">4 papers</span>
             </a>
             <a href="#pub-dynamic-worlds">
               <span class="publication-category-index">02</span>
@@ -279,6 +283,62 @@
                 </details>
               </div>
               <p class="paper-description">- We propose RoboStream, a training-free framework that equips VLM-based robotic planners with persistent spatio-temporal memory for long-horizon manipulation. Spatio-Temporal Fusion Tokens maintain object grounding, while a Causal Spatio-Temporal Graph records action-triggered state transitions, achieving 90.5% on long-horizon RLBench and 44.4% on challenging real-world block-building tasks.</p>
+            </div>
+          </article>
+
+          <article class="paper-box" id="paper-robotworld" data-publication-category="long-horizon-embodied">
+            <div class="paper-box-image">
+              <div class="paper-media">
+                <span class="badge preprint">Preprint</span>
+                <video class="paper-preview-full" controls autoplay muted loop playsinline preload="metadata" poster="images/RobotWorld/RobotWorld-poster.png" aria-label="RobotWorld full 45-second showreel">
+                  <source src="images/RobotWorld/RobotWorld-showreel.mp4" type="video/mp4">
+                  <a href="images/RobotWorld/RobotWorld-showreel.mp4">Watch the robotworld video</a>
+                </video>
+              </div>
+            </div>
+            <div class="paper-box-text">
+              <h2 class="paper-title"><a href="https://robotworldai.github.io/">RobotWorld: Benchmarking Multimodal Agents for Robot Use Across Diverse Tasks and Embodiments</a></h2>
+              <p class="paper-authors">Zhiqin Yang*, Chenxin Li*†, Xiaomeng Hu*†, Yibin Liu, Weidong Huang, Jiankai Sun, Haitao Li, Zijian Wu, <span class="me">Yuzhi Huang</span>, Fanding Huang, Hanwen Sun, Jiashun Liu, Jingqi Tong, Mingxin Huang, Shaoli Hu, Shijue Huang, Tianyi Bai, Xinyuan Wang, Yunlong Lin, Zhengyang Tang, Zhexin Zhang, Zhuo Chen, Xierui Song, Juntao Dai, Boyuan Chen, Jiaming Ji, Fangneng Zhan, Mengkang Hu, Wei Xue, Yonggang Zhang, Han Hu, Tsung-Yi Ho, Yike Guo</p>
+              <p class="paper-venue">Preprint, 2026</p>
+              <div class="paper-links">
+                <a href="https://robotworldai.github.io/">Project Page</a>
+                <a class="arxiv" href="https://arxiv.org/abs/2610.10409">arXiv</a>
+                <a href="https://github.com/robotworldai/robotworld">Code</a>
+                <a href="images/RobotWorld/RobotWorld-showreel.mp4">Video</a>
+                <details>
+                  <summary>Abstract</summary>
+                  <p class="abstract">RobotWorld investigates how general-purpose multimodal agents transfer their digital tool-use capabilities to physical task execution through robot interfaces. Its 84 simulation tasks span manipulation, mobile manipulation, locomotion, driving, and aerial control, with explicit interaction budgets and executable success checks. Agents can construct sophisticated perception and control workflows involving segmentation, camera calibration, spatial estimation, and dynamics computation, yet these capabilities do not consistently compose into successful behavior. Execution-trace analysis exposes lost object states, ineffective action correction, late recovery, and mistaken completion judgments, providing concrete targets for more reliable physical-world agents.</p>
+                </details>
+              </div>
+              <p class="paper-description">A benchmark for multimodal robot use across 84 tasks and 18 embodiments, revealing challenges in state tracking, feedback correction, and reliable task completion.</p>
+            </div>
+          </article>
+
+          <article class="paper-box" id="paper-chunktrust" data-publication-category="long-horizon-embodied">
+            <div class="paper-box-image">
+              <div class="paper-media">
+                <span class="badge preprint">Preprint</span>
+                <video class="paper-preview-full" controls autoplay muted loop playsinline preload="metadata" poster="images/ChunkTrust/ChunkTrust-poster.jpg" aria-label="ChunkTrust work overview video">
+                  <source src="images/ChunkTrust/ChunkTrust-preview.mp4" type="video/mp4">
+                  <a href="images/ChunkTrust/ChunkTrust-preview.mp4">Watch the chunktrust video</a>
+                </video>
+              </div>
+            </div>
+            <div class="paper-box-text">
+              <h2 class="paper-title"><a href="https://hf618.github.io/ChunkTrust.github.io/">ChunkTrust: Adapting Execution Horizons for Robot Policies with Action-Expert Evidence</a></h2>
+              <p class="paper-authors">Fanding Huang*, Jingyan Jiang*, Shifeng Bao*, Mingkang Pu, Shiwei Li, Jing Xu, Shijia Xu, Guanbo Huang, Chenghao Gu, <span class="me">Yuzhi Huang</span>, Chenxin Li, Faisal Nadeem Khan, Huan Yang, Yan Wang, Cheng Chi†, Zhi Wang†</p>
+              <p class="paper-venue">Preprint, 2026</p>
+              <div class="paper-links">
+                <a href="https://hf618.github.io/ChunkTrust.github.io/">Project Page</a>
+                <a class="arxiv" href="https://arxiv.org/abs/2609.39754">arXiv</a>
+                <a href="https://github.com/hf618/ChunkTrust">Code</a>
+                <a href="images/ChunkTrust/ChunkTrust-preview.mp4">Video</a>
+                <details>
+                  <summary>Abstract</summary>
+                  <p class="abstract">Robot foundation policies predict action chunks, but how many actions to execute before replanning depends on the current task phase. ChunkTrust treats the execution horizon as a latent variable inferred from action-expert evidence. Its training-free Action-aware Horizon Selector (AHS) combines intra-chunk spectral stability with inter-chunk motion continuity, while an online Beta posterior with kernel forgetting tracks horizon preferences across replans. An optional Query-based Horizon Adapter (QHA) learns a context-conditioned prior while keeping the base policy frozen. AHS improves success across evaluated RoboTwin2.0 and RoboCasa GR1 Tabletop configurations, and raises the mean normalized process score on four real-world household tasks from 50.4% to 57.5%.</p>
+                </details>
+              </div>
+              <p class="paper-description">Adaptive execution horizons for robot foundation policies, combining action-expert evidence with phase-aware memory to decide when to replan.</p>
             </div>
           </article>
 

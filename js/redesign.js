@@ -132,6 +132,8 @@
         Number(b.classList.contains("paper-box--collaboration"))
       );
       if (!papers.length) return;
+      const itemLabel = category.key === "long-horizon-embodied" ? "project" : "paper";
+      const countLabel = `${papers.length} ${itemLabel}${papers.length === 1 ? "" : "s"}`;
 
       const group = document.createElement("section");
       group.className = "publication-group";
@@ -146,7 +148,7 @@
         </div>
         <div class="publication-group-summary">
           <p>${category.description}</p>
-          <span>${papers.length} ${papers.length === 1 ? "paper" : "papers"}</span>
+          <span>${countLabel}</span>
         </div>
       `;
 
@@ -157,7 +159,7 @@
         `.publication-categories a[href="#${group.id}"] .publication-category-count`
       );
       if (navCount) {
-        navCount.textContent = `${papers.length} ${papers.length === 1 ? "paper" : "papers"}`;
+        navCount.textContent = countLabel;
       }
     });
 

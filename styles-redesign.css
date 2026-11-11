@@ -618,6 +618,10 @@ p {
   background: #ff2442;
 }
 
+.paper-links a.douyin {
+  background: #161823;
+}
+
 .paper-links a.arxiv {
   background: #b31b1b;
 }

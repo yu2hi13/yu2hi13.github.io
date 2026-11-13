@@ -241,6 +241,13 @@ p {
   margin-bottom: 12px;
 }
 
+.lab-logo-inline {
+  width: 118px;
+  height: auto;
+  margin: 0 2px;
+  vertical-align: -0.4em;
+}
+
 .research-interest {
   padding: 3px 0 1px 22px;
   border-left: 2px solid #ececec;

@@ -134,6 +134,7 @@
             <div class="research-group">
               <h2>Multimodal Dynamic Reasoning &amp; Evaluation</h2>
               <ul>
+                <li><strong>Latent 4D modeling for observed and future dynamics:</strong> <a href="https://pros4d.github.io/">Pros4D</a></li>
                 <li><strong>Benchmarking localized dynamics perception and 4D reasoning:</strong> <a href="https://dyn-bench.github.io/">Thinking in Dynamics (Dyn-Bench)</a></li>
                 <li><strong>Continuous dynamic evidence tracking for MLLMs:</strong> <a href="https://dyntrace.github.io/">DynTrace</a></li>
               </ul>
@@ -155,7 +156,8 @@
         <section id="news">
           <h1 class="section-title">🔥 News</h1>
           <ul class="news-list">
-            <li><em>2026.11</em>: &nbsp;🎉 <strong><a href="https://mind2act-world.com/">Mind2Act World</a></strong>, a diagnostic benchmark for embodied mind, physical action, and their composition across 30 simulation tasks, is now live. The technical report and full code will follow soon.</li>
+            <li><em>2026.11</em>: &nbsp;🎉 The <a href="https://arxiv.org/abs/2611.26444">Mind2Act World technical report</a> is out, with <a href="https://github.com/Mind2Act/Mind2Act_World">benchmark code</a> and <a href="https://huggingface.co/datasets/Mind2Act-World/mind2act-train">training demonstrations</a> available.</li>
+            <li><em>2026.11</em>: &nbsp;🎉 <strong><a href="https://pros4d.github.io/">Pros4D</a></strong> is available as a <a href="https://arxiv.org/abs/2611.19803">preprint</a> on latent 4D world modeling for dynamic spatial reasoning.</li>
             <li><em>2026.10</em>: &nbsp;🎉 Selected for the <strong>Young Science and Technology Talent Cultivation Program (Doctoral Track)</strong> of the <strong>China Association for Science and Technology (CAST)</strong>.</li>
             <li><em>2026.10</em>: &nbsp;🎉 <strong><a href="https://robotworldai.github.io/">RobotWorld</a></strong> was released as a preprint, benchmarking multimodal agents for robot use.</li>
             <li><em>2026.09</em>: &nbsp;🎉 <strong><a href="https://hf618.github.io/ChunkTrust.github.io/">ChunkTrust</a></strong> was released as a preprint on adaptive execution horizons for robot policies.</li>
@@ -185,7 +187,7 @@
             <a href="#pub-dynamic-worlds">
               <span class="publication-category-index">02</span>
               <span class="publication-category-label">Dynamic 4D World Modeling &amp; Reasoning</span>
-              <span class="publication-category-count">4 papers</span>
+              <span class="publication-category-count">5 papers</span>
             </a>
             <a href="#pub-video-anomaly">
               <span class="publication-category-index">03</span>
@@ -202,7 +204,7 @@
           <article class="paper-box" id="paper-mind2act" data-publication-category="long-horizon-embodied">
             <div class="paper-box-image">
               <a href="https://mind2act-world.com/">
-                <span class="badge">Project Release</span>
+                <span class="badge preprint">Preprint</span>
                 <video class="paper-preview-wide" autoplay muted loop playsinline preload="metadata" poster="images/Mind2Act/Mind2Act-World-cover.jpg" aria-label="Mind2Act World promotional video showing robotic manipulation tasks across Mind, Act, and Mind2Act suites">
                   <source src="images/Mind2Act/Mind2Act-World-preview.mp4" type="video/mp4">
                   View the Mind2Act World project and video.
@@ -211,13 +213,18 @@
             </div>
             <div class="paper-box-text">
               <h2 class="paper-title"><a href="https://mind2act-world.com/">Mind2Act World: A Diagnostic Benchmark for Embodied Mind, Physical Action, and Mind-Action Composition in Robotic Manipulation</a></h2>
-              <p class="paper-venue">Project release, 2026 · Technical report and full code coming soon.</p>
+              <p class="paper-authors"><span class="me">Yuzhi Huang*†</span>, Jie Wu*†, Fanding Huang*, Junchao Lin*, Weichen Zhang*, Ziyi Xiong*, Yang Li*, Zhengwei Xie*, Zhimin Wang*, Zhen Liu*, Jiazhen Huang*, Yuzheng Zhang, Yuche Liu, Hongyi Yang, Chen Tang, Shixiang Tang, Hakan Aktas, Adam Wu, Duo Wu, Kangye Ji, Shuzhao Xie, Huanan Liu, Weijue Bu, Chenxin Li, Xinyuan Wang, Tianyi Bai, Yinan Mao, Jiawei Wang, Minglei Li, Heng Yu, Ehsan Adeli, Minchen Li, Yong-Lu Li, Cengiz Öztireli, Huazhe Xu, Chao Yu, Jing Zhang, Shanghang Zhang, Weitao Zhou, Wenwu Zhu, Cheng Chi†, Jingyan Jiang†, Zhi Wang†</p>
+              <p class="paper-venue">Technical Report, 2026</p>
               <div class="paper-links">
                 <a href="https://mind2act-world.com/">Project Page</a>
+                <a class="arxiv" href="https://arxiv.org/abs/2611.26444">arXiv</a>
+                <a class="code" href="https://github.com/Mind2Act/Mind2Act_World">Code</a>
+                <a class="code" href="https://huggingface.co/datasets/Mind2Act-World/mind2act-train">Data</a>
+                <a href="https://mind2act-world.com/diagnosis.html">Diagnosis &amp; Model Profiles</a>
                 <a class="douyin" href="https://v.douyin.com/rN4StOLLY5k/">抖音</a>
                 <a class="rednote" href="https://www.xiaohongshu.com/explore/6af459e1000000002a0108d1?xsec_token=CBJkfzUw3l77XlZbfw3Y7sbtaO9jvcpzg4hZZziLRfiRk=&amp;xsec_source=app_share">小红书</a>
               </div>
-              <p class="paper-description">- Mind2Act World diagnoses embodied mind, physical action, and their composition across 30 simulation tasks in three suites: Mind, Act, and Mind2Act. Stage progress and event-level evidence help identify where robotic manipulation fails.</p>
+              <p class="paper-description">Mind2Act World evaluates reasoning, physical execution, and their closed-loop composition across 30 simulated manipulation tasks. Stage progress and event-level evidence help attribute failures to Mind, Act, or their composition. Model profile cards summarize these patterns for selected systems.</p>
             </div>
           </article>
 
@@ -371,6 +378,25 @@
                 </details>
               </div>
               <p class="paper-description">Adaptive execution horizons for robot foundation policies, combining action-expert evidence with phase-aware memory to decide when to replan.</p>
+            </div>
+          </article>
+
+          <article class="paper-box" id="paper-pros4d" data-publication-category="dynamic-worlds">
+            <div class="paper-box-image">
+              <a href="https://pros4d.github.io/">
+                <span class="badge preprint">Preprint</span>
+                <img class="paper-preview-wide" src="images/Pros4D/Pros4D-teaser.webp" alt="Pros4D teaser showing observed street footage and latent reasoning about how the scene evolves" loading="lazy">
+              </a>
+            </div>
+            <div class="paper-box-text">
+              <h2 class="paper-title"><a href="https://pros4d.github.io/">Pros4D: Modeling Evolving 4D Worlds in Latent Space for Dynamic Spatial Reasoning</a></h2>
+              <p class="paper-authors">Rongxin Gao, Dongxuan Liu, Chu Li, Chengyang Ji, Jialing Huang, Runyu Chen, Kairun Wen, Chenxin Li, Jingrui Ye, Haosong Zhen, Xinghao Ding†, Yue Huang, <span class="me">Yuzhi Huang†</span>, Xiaotong Tu, Jingyan Jiang</p>
+              <p class="paper-venue">Preprint, 2026</p>
+              <div class="paper-links">
+                <a href="https://pros4d.github.io/">Project Page</a>
+                <a class="arxiv" href="https://arxiv.org/abs/2611.19803">arXiv</a>
+              </div>
+              <p class="paper-description">Pros4D encodes observed dynamics from monocular video into latent states and rolls them forward to predict how cameras, objects, and scenes evolve. Geometry and visual semantics supervise the latent states during training, and Pros4D-Bench evaluates reasoning about both observed and future dynamics.</p>
             </div>
           </article>
 

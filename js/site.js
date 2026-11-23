@@ -117,5 +117,26 @@
     items.forEach((el) => { el.classList.add("reveal"); io.observe(el); });
   }
 
+  // moon face: eyes follow the pointer, wander when idle, smile on hover or tap
+  const moon = $(".moon");
+  if (moon) {
+    const calm = matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const look = (x, y) => { moon.style.setProperty("--lx", x.toFixed(2)); moon.style.setProperty("--ly", y.toFixed(2)); };
+    let idle;
+    const wander = () => { clearTimeout(idle); idle = setTimeout(() => { look(Math.random() * 2 - 1, Math.random() * 1.6 - .8); wander(); }, 2400 + Math.random() * 2000); };
+    if (!calm) {
+      addEventListener("pointermove", (e) => {
+        const r = moon.getBoundingClientRect();
+        const dx = e.clientX - (r.left + r.width / 2), dy = e.clientY - (r.top + r.height / 2), d = Math.hypot(dx, dy) || 1, k = Math.min(1, d / 240);
+        look(dx / d * k, dy / d * k); wander();
+      }, { passive: true });
+      wander();
+    }
+    const smile = (ms) => { moon.classList.add("is-happy"); clearTimeout(moon.t); if (ms) moon.t = setTimeout(() => moon.classList.remove("is-happy"), ms); };
+    moon.addEventListener("pointerenter", () => smile(0));
+    moon.addEventListener("pointerleave", () => smile(500));
+    moon.addEventListener("click", () => { moon.classList.remove("is-happy"); void moon.offsetWidth; smile(1400); });
+  }
+
   $$('a[href^="http"]').forEach((a) => { a.target = "_blank"; a.rel = "noopener noreferrer"; });
 })();

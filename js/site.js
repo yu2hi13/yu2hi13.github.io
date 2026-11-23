@@ -25,16 +25,6 @@
   }, { rootMargin: "-30% 0px -60%" });
   sections.forEach((s) => spy.observe(s));
 
-  // typed tagline
-  const tag = $(".hero-tagline em");
-  if (tag && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    const text = tag.textContent;
-    tag.textContent = "";
-    let i = 0;
-    const step = () => { tag.textContent = text.slice(0, ++i); if (i < text.length) setTimeout(step, 38 + Math.random() * 40); };
-    setTimeout(step, 450);
-  }
-
   // compact long author lists, keep first, last, self and marked authors
   $$(".pub").forEach((paper, index) => {
     const authors = $(".paper-authors", paper);
@@ -76,25 +66,30 @@
     authors.replaceChildren(short, full, document.createTextNode(" "), toggle);
   });
 
-  // publication filter
-  const filterButtons = $$(".pub-filter button");
-  filterButtons.forEach((b) => b.addEventListener("click", () => {
-    const f = b.dataset.filter;
-    filterButtons.forEach((x) => x.classList.toggle("is-active", x === b));
+  // publication filter: one category plus an optional first-author toggle
+  const state = { cat: "all", lead: false };
+  const catButtons = $$("#publications [data-filter]:not([data-filter=lead])");
+  const leadButton = $("#publications [data-filter=lead]");
+  const applyFilter = () => {
+    catButtons.forEach((x) => x.classList.toggle("is-on", x.dataset.filter === state.cat));
+    leadButton?.classList.toggle("is-on", state.lead);
     $$(".pub").forEach((p) => {
-      p.hidden = !(f === "all" || (f === "lead" ? p.hasAttribute("data-lead") : p.dataset.cat === f));
+      p.hidden = !((state.cat === "all" || p.dataset.cat === state.cat) && (!state.lead || p.hasAttribute("data-lead")));
     });
-  }));
+  };
+  catButtons.forEach((b) => b.addEventListener("click", () => { state.cat = b.dataset.filter; applyFilter(); }));
+  leadButton?.addEventListener("click", () => { state.lead = !state.lead; applyFilter(); });
 
   // news: show the latest items first
   const news = $(".news");
   const newsToggle = $(".news-toggle");
   if (news && newsToggle && $(".news-more", news)) {
     news.classList.add("is-collapsed");
+    newsToggle.dataset.label = newsToggle.textContent;
     newsToggle.addEventListener("click", () => {
       const collapsed = news.classList.toggle("is-collapsed");
       newsToggle.setAttribute("aria-expanded", String(!collapsed));
-      newsToggle.textContent = collapsed ? "Show earlier news" : "Show fewer";
+      newsToggle.textContent = collapsed ? newsToggle.dataset.label : "Show fewer";
     });
   } else if (newsToggle) newsToggle.hidden = true;
 
@@ -112,15 +107,10 @@
     if (e.isIntersecting) v.play?.().catch(() => {}); else v.pause?.();
   }), { threshold: 0.2 });
   $$(".pub-thumb video[autoplay]").forEach((v) => vids.observe(v));
-  $$(".work").forEach((d) => d.addEventListener("toggle", () => {
-    const v = $("video", d);
-    if (!v) return;
-    if (d.open) { v.muted = true; v.loop = true; v.play?.().catch(() => {}); } else v.pause?.();
-  }));
 
   // gentle reveal on scroll
   if ("IntersectionObserver" in window && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    const items = $$(".block-head, .interest, .work, .news li, .tally, .pub, .row, .awards li, .service li");
+    const items = $$(".chapter, .about-card, .interest, .table, .news-card, .rows, .list-card");
     const io = new IntersectionObserver((entries) => entries.forEach((e) => {
       if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
     }), { rootMargin: "0px 0px -6% 0px" });

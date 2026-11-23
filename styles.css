@@ -158,6 +158,7 @@ button { font: inherit; }
 .pub-links > a.arxiv { color: #b31b1b; }
 .pub-links > a.code { color: var(--accent); }
 .pub-links > a.rednote, .pub-links > a.douyin { color: #e8173a; }
+.pub-links > a.media { color: #b0582d; }
 .pub-links details { display: contents; }
 .pub-links details[open] summary { background: var(--ink); color: var(--mint); border-color: var(--ink); }
 .pub-links .abstract { flex-basis: 100%; margin: 6px 0 0; padding: 10px 12px; border-radius: 8px; background: var(--soft); border: 1px solid var(--line); font-size: 13px; line-height: 1.6; color: var(--body); }
@@ -176,6 +177,7 @@ button { font: inherit; }
 .news-tag--paper { background: var(--ink); color: var(--mint); }
 .news-tag--release { background: #e6eef7; color: #2a5a8f; }
 .news-tag--honor { background: #f5ecdc; color: #8a6a2f; }
+.news-tag--media { background: #fbe9e4; color: #b0582d; }
 .news-tag--talk { background: #efe8f1; color: #6a4f72; }
 .news p { margin: 0; font-size: 14.5px; }
 .news.is-collapsed .news-more { display: none; }

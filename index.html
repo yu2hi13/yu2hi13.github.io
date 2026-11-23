@@ -7,8 +7,8 @@
   <title>Yuzhi Huang · 黄誉之</title>
   <link rel="icon" type="image/png" sizes="64x64" href="images/favicon.png">
   <link rel="preload" href="fonts/PixelifySans-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="styles.css?v=20261123-m2a5">
-  <script src="js/site.js?v=20261123-m2a5" defer></script>
+  <link rel="stylesheet" href="styles.css?v=20261123-m2a6">
+  <script src="js/site.js?v=20261123-m2a6" defer></script>
 </head>
 <body>
   <header class="header">
@@ -103,20 +103,22 @@
       <header class="chapter chapter--tools">
         <span class="chapter-no">02</span>
         <div><p class="kicker">Publications · 14 papers and preprints</p><h2>Publications</h2></div>
-        <div class="pill-group" role="group" aria-label="Filter publications">
-          <button type="button" class="is-on" data-filter="all">All</button>
-          <button type="button" data-filter="long-horizon-embodied">Embodied</button>
-          <button type="button" data-filter="dynamic-worlds">4D Worlds</button>
-          <button type="button" data-filter="video-anomaly">Anomaly</button>
-          <button type="button" data-filter="foundation-model-adaptation">Segmentation</button>
-        </div>
-        <div class="pill-group pill-group--dark" role="group" aria-label="Author role">
-          <button type="button" data-filter="lead">First author</button>
-        </div>
+        <nav class="pill-group" aria-label="Publication directions">
+          <a href="#pub-long-horizon-embodied">Embodied</a>
+          <a href="#pub-dynamic-worlds">4D Worlds</a>
+          <a href="#pub-video-anomaly">Anomaly</a>
+          <a href="#pub-foundation-model-adaptation">Segmentation</a>
+        </nav>
       </header>
       <div class="tally"><span class="tally-label">Accepted</span><span><b>CVPR</b> × 2</span><span><b>ECCV</b> × 1</span><span><b>NeurIPS</b> × 2</span><span><b>ACM MM</b> × 2</span><span><b>Workshop Oral</b> × 1</span><span class="tally-note">* equal contribution · † corresponding author or project lead · ★ highlight</span></div>
-      <div class="card table">
-        <div class="table-head" aria-hidden="true"><span>#</span><span>Paper</span><span></span><span>Venue · Role</span></div>
+      <div class="pub-groups">
+      <div class="card pub-group" id="pub-long-horizon-embodied">
+        <div class="pub-group-head">
+          <span class="pub-group-no">Direction 01</span>
+          <h3>Long-Horizon Embodied Intelligence</h3>
+          <p>Robot-use evaluation, adaptive execution horizons, and persistent memory for manipulation</p>
+          <span class="pub-group-count">5 papers</span>
+        </div>
         <div class="pubs">
           <article class="pub" data-cat="long-horizon-embodied" data-lead id="paper-mind2act">
             <span class="pub-no">01</span>
@@ -137,31 +139,10 @@
             </div>
             <div class="pub-venue">
               <span class="venue-chip">Tech Report 2026</span>
-              <span class="role">1st author</span><span class="role">Corr.</span>
-            </div>
-          </article>
-          <article class="pub" data-cat="video-anomaly">
-            <span class="pub-no">02</span>
-            <a class="pub-thumb" href="https://yarkupa.github.io/tau-bench.github.io/" tabindex="-1"><img loading="lazy" src="images/TAU-Bench/TAU-Bench-overview.png" alt="TAU-Bench overview connecting anomaly instance tracking with fine-grained video anomaly understanding" ></a>
-            <div class="pub-main">
-              <h3 class="pub-title"><a href="https://yarkupa.github.io/tau-bench.github.io/">TAU-Bench: From Anomaly Instance Tracking to Fine-Grained Video Anomaly Understanding</a></h3>
-              <p class="paper-authors">Kepeng Yang*, Dongxuan Liu*, Rongxin Gao*, Zixin Su, Rui Wu, Shuzhao Xie, Chenxin Li, Panwang Pan, <span class="me">Yuzhi Huang†</span>, Yue Huang†, Jingyan Jiang</p>
-              <div class="pub-links">
-                <a href="https://yarkupa.github.io/tau-bench.github.io/">Project Page</a>
-                <a class="arxiv" href="https://arxiv.org/abs/2608.05699">arXiv</a>
-                <details>
-                <summary>Abstract</summary>
-                <p class="abstract">TAU-Bench is a track-centric benchmark for jointly evaluating anomaly instance tracking and fine-grained video anomaly understanding.</p>
-                </details>
-              </div>
-            </div>
-            <div class="pub-venue">
-              <span class="venue-chip">Preprint 2026</span>
-              <span class="role">Corr.</span>
             </div>
           </article>
           <article class="pub" data-cat="long-horizon-embodied" data-lead id="paper-chainvla">
-            <span class="pub-no">03</span>
+            <span class="pub-no">02</span>
             <a class="pub-thumb" href="https://muqy1818.github.io/chainvla-web/" tabindex="-1"><img loading="lazy" src="images/ChainVLA/ChainVLA-teaser.png" alt="ChainVLA execution-state overview for long-horizon manipulation" ></a>
             <div class="pub-main">
               <h3 class="pub-title"><a href="https://muqy1818.github.io/chainvla-web/">ChainVLA: Chaining Vision-Language-Action Queries through a Unified Execution State for Long-Horizon Manipulation</a></h3>
@@ -178,32 +159,10 @@
             </div>
             <div class="pub-venue">
               <span class="venue-chip">Preprint 2026</span>
-              <span class="role">1st author</span>
-            </div>
-          </article>
-          <article class="pub" data-cat="dynamic-worlds" data-lead id="paper-dyntrace">
-            <span class="pub-no">04</span>
-            <a class="pub-thumb" href="https://dyntrace.github.io/" tabindex="-1"><img loading="lazy" src="images/dyntrace/DynTrace.png" alt="DynTrace method overview" ></a>
-            <div class="pub-main">
-              <h3 class="pub-title"><a href="https://dyntrace.github.io/">DynTrace: Tracking Dynamic Object Evidence for 4D Spatio-Temporal Reasoning in MLLMs</a></h3>
-              <p class="paper-authors">Rongxin Gao*, <span class="me">Yuzhi Huang*†</span>, Dongxuan Liu*, Chu Li, Zhenye Wang, Jie Wu, Shuzhao Xie, Jingyan Jiang, Xinghao Ding, Xiaotong Tu, Yue Huang</p>
-              <div class="pub-links">
-                <a href="https://dyntrace.github.io/">Project Page</a>
-                <a class="rednote" href="https://www.xiaohongshu.com/explore/6a58ca35000000000e0357c1?app_platform=ios&amp;app_version=9.39&amp;share_from_user_hidden=true&amp;xsec_source=app_share&amp;type=normal&amp;xsec_token=CBrYv5UjnI1u0szznP-OHDqBiZshKhk0rLlmiTH01Izfs=&amp;author_share=1&amp;xhsshare=WeixinSession&amp;shareRedId=ODY3Qjc8SE82NzUyOTgwNjY0OTdGNUc-&amp;apptime=1785129774&amp;share_id=9723cc6b8f074c309eeec35ced6d76f9&amp;code=4zFJilK1AIq&amp;wechatWid=2336863facef690149819a98448918c2&amp;wechatOrigin=menu">小红书</a>
-                <a class="arxiv" href="https://arxiv.org/abs/2607.12503">arXiv</a>
-                <details>
-                <summary>Abstract</summary>
-                <p class="abstract">DynTrace is a training-free framework that tracks continuous dynamic object evidence for coherent 4D reasoning. It combines geometry-informed trajectory visualization with a structured Dynamic Trace Graph.</p>
-                </details>
-              </div>
-            </div>
-            <div class="pub-venue">
-              <span class="venue-chip is-accepted">ACM MM 2026</span>
-              <span class="role">Co-1st</span><span class="role">Corr.</span>
             </div>
           </article>
           <article class="pub" data-cat="long-horizon-embodied" data-lead id="paper-robostream">
-            <span class="pub-no">05</span>
+            <span class="pub-no">03</span>
             <a class="pub-thumb" href="https://robostream123.github.io/" tabindex="-1"><video autoplay muted loop playsinline preload="metadata" poster="images/RoboStream/Overview.png"> <source src="images/RoboStream/RoboStream-preview.mp4" type="video/mp4"> </video></a>
             <div class="pub-main">
               <h3 class="pub-title"><a href="https://robostream123.github.io/">RoboStream: Weaving Spatio-Temporal Reasoning with Memory in Vision-Language Models for Robotics</a></h3>
@@ -220,11 +179,10 @@
             </div>
             <div class="pub-venue">
               <span class="venue-chip is-accepted">ECCV 2026</span>
-              <span class="role">1st author</span><span class="role">Corr.</span>
             </div>
           </article>
           <article class="pub" data-cat="long-horizon-embodied" id="paper-robotworld">
-            <span class="pub-no">06</span>
+            <span class="pub-no">04</span>
             <a class="pub-thumb" href="https://robotworldai.github.io/" tabindex="-1"><video autoplay muted loop playsinline preload="metadata" poster="images/RobotWorld/RobotWorld-poster.png" aria-label="RobotWorld full 45-second showreel"> <source src="images/RobotWorld/RobotWorld-showreel.mp4" type="video/mp4"> </video></a>
             <div class="pub-main">
               <h3 class="pub-title"><a href="https://robotworldai.github.io/">RobotWorld: Benchmarking Multimodal Agents for Robot Use Across Diverse Tasks and Embodiments</a></h3>
@@ -242,11 +200,10 @@
             </div>
             <div class="pub-venue">
               <span class="venue-chip">Preprint 2026</span>
-              
             </div>
           </article>
           <article class="pub" data-cat="long-horizon-embodied" id="paper-chunktrust">
-            <span class="pub-no">07</span>
+            <span class="pub-no">05</span>
             <a class="pub-thumb" href="https://hf618.github.io/ChunkTrust.github.io/" tabindex="-1"><video autoplay muted loop playsinline preload="metadata" poster="images/ChunkTrust/ChunkTrust-poster.jpg" aria-label="ChunkTrust work overview video"> <source src="images/ChunkTrust/ChunkTrust-preview.mp4" type="video/mp4"> </video></a>
             <div class="pub-main">
               <h3 class="pub-title"><a href="https://hf618.github.io/ChunkTrust.github.io/">ChunkTrust: Adapting Execution Horizons for Robot Policies with Action-Expert Evidence</a></h3>
@@ -264,46 +221,40 @@
             </div>
             <div class="pub-venue">
               <span class="venue-chip">Preprint 2026</span>
-              
             </div>
           </article>
-          <article class="pub" data-cat="dynamic-worlds" id="paper-pros4d">
-            <span class="pub-no">08</span>
-            <a class="pub-thumb" href="https://pros4d.github.io/" tabindex="-1"><img loading="lazy" src="images/Pros4D/Pros4D-teaser.webp" alt="Pros4D teaser showing observed street footage and latent reasoning about how the scene evolves" ></a>
+        </div>
+      </div>
+      <div class="card pub-group" id="pub-dynamic-worlds">
+        <div class="pub-group-head">
+          <span class="pub-group-no">Direction 02</span>
+          <h3>Dynamic 4D World Modeling &amp; Reasoning</h3>
+          <p>Geometric reconstruction, streaming perception, and physical-world reasoning</p>
+          <span class="pub-group-count">5 papers</span>
+        </div>
+        <div class="pubs">
+          <article class="pub" data-cat="dynamic-worlds" data-lead id="paper-dyntrace">
+            <span class="pub-no">06</span>
+            <a class="pub-thumb" href="https://dyntrace.github.io/" tabindex="-1"><img loading="lazy" src="images/dyntrace/DynTrace.png" alt="DynTrace method overview" ></a>
             <div class="pub-main">
-              <h3 class="pub-title"><a href="https://pros4d.github.io/">Pros4D: Modeling Evolving 4D Worlds in Latent Space for Dynamic Spatial Reasoning</a></h3>
-              <p class="paper-authors">Rongxin Gao, Dongxuan Liu, Chu Li, Chengyang Ji, Jialing Huang, Runyu Chen, Kairun Wen, Chenxin Li, Jingrui Ye, Haosong Zhen, Xinghao Ding†, Yue Huang, <span class="me">Yuzhi Huang†</span>, Xiaotong Tu, Jingyan Jiang</p>
+              <h3 class="pub-title"><a href="https://dyntrace.github.io/">DynTrace: Tracking Dynamic Object Evidence for 4D Spatio-Temporal Reasoning in MLLMs</a></h3>
+              <p class="paper-authors">Rongxin Gao*, <span class="me">Yuzhi Huang*†</span>, Dongxuan Liu*, Chu Li, Zhenye Wang, Jie Wu, Shuzhao Xie, Jingyan Jiang, Xinghao Ding, Xiaotong Tu, Yue Huang</p>
               <div class="pub-links">
-                <a href="https://pros4d.github.io/">Project Page</a>
-                <a class="arxiv" href="https://arxiv.org/abs/2611.19803">arXiv</a>
-              </div>
-            </div>
-            <div class="pub-venue">
-              <span class="venue-chip">Preprint 2026</span>
-              <span class="role">Corr.</span>
-            </div>
-          </article>
-          <article class="pub" data-cat="dynamic-worlds">
-            <span class="pub-no">09</span>
-            <a class="pub-thumb" href="https://zipvggt.github.io/" tabindex="-1"><img loading="lazy" src="images/zipvggt/Zip-VGGT.png" alt="Zip-VGGT project overview" ></a>
-            <div class="pub-main">
-              <h3 class="pub-title"><a href="https://zipvggt.github.io/">Zip-VGGT: Object-Centric Spatiotemporal KV Compression for Streaming Vision Transformers</a></h3>
-              <p class="paper-authors">Kairun Wen†, Runyu Chen, Wenyan Cong, Peiwei Lin, Tao Lu, Lihan Jiang, Weiguang Zhao, Junting Dong, Yunlong Lin, <span class="me">Yuzhi Huang</span>, Xinghao Ding, Hongsheng Li, Linning Xu, Mulin Yu</p>
-              <div class="pub-links">
-                <a href="https://zipvggt.github.io/">Project Page</a>
+                <a href="https://dyntrace.github.io/">Project Page</a>
+                <a class="rednote" href="https://www.xiaohongshu.com/explore/6a58ca35000000000e0357c1?app_platform=ios&amp;app_version=9.39&amp;share_from_user_hidden=true&amp;xsec_source=app_share&amp;type=normal&amp;xsec_token=CBrYv5UjnI1u0szznP-OHDqBiZshKhk0rLlmiTH01Izfs=&amp;author_share=1&amp;xhsshare=WeixinSession&amp;shareRedId=ODY3Qjc8SE82NzUyOTgwNjY0OTdGNUc-&amp;apptime=1785129774&amp;share_id=9723cc6b8f074c309eeec35ced6d76f9&amp;code=4zFJilK1AIq&amp;wechatWid=2336863facef690149819a98448918c2&amp;wechatOrigin=menu">小红书</a>
+                <a class="arxiv" href="https://arxiv.org/abs/2607.12503">arXiv</a>
                 <details>
                 <summary>Abstract</summary>
-                <p class="abstract">Zip-VGGT introduces object-centric spatiotemporal KV compression for streaming vision, preserving geometric topology and dynamic trajectories while controlling long-term memory use.</p>
+                <p class="abstract">DynTrace is a training-free framework that tracks continuous dynamic object evidence for coherent 4D reasoning. It combines geometry-informed trajectory visualization with a structured Dynamic Trace Graph.</p>
                 </details>
               </div>
             </div>
             <div class="pub-venue">
-              <span class="venue-chip">Preprint</span>
-              
+              <span class="venue-chip is-accepted">ACM MM 2026</span>
             </div>
           </article>
           <article class="pub" data-cat="dynamic-worlds" data-lead id="paper-dynbench">
-            <span class="pub-no">10</span>
+            <span class="pub-no">07</span>
             <a class="pub-thumb" href="https://dyn-bench.github.io/" tabindex="-1"><img loading="lazy" src="images/dynbench/Dynbench-teaser.png" alt="Dyn-Bench teaser" ></a>
             <div class="pub-main">
               <h3 class="pub-title"><span class="pub-star" title="Highlight">★</span><a href="https://dyn-bench.github.io/">Thinking in Dynamics: How Multimodal Large Language Models Perceive, Track, and Reason Dynamics in Physical 4D World</a></h3>
@@ -322,11 +273,10 @@
             </div>
             <div class="pub-venue">
               <span class="venue-chip is-accepted">CVPR 2026</span>
-              <span class="role">1st author</span><span class="role">Corr.</span>
             </div>
           </article>
           <article class="pub" data-cat="dynamic-worlds" data-lead id="paper-dynamicverse">
-            <span class="pub-no">11</span>
+            <span class="pub-no">08</span>
             <a class="pub-thumb" href="https://dynamic-verse.github.io/" tabindex="-1"><video autoplay muted loop playsinline preload="metadata"> <source src="images/dynamic_verse/DynamicVerse-preview.mp4" type="video/mp4"> </video></a>
             <div class="pub-main">
               <h3 class="pub-title"><a href="https://dynamic-verse.github.io/">DynamicVerse: Physically-Aware Multimodal Modeling for Dynamic 4D Worlds</a></h3>
@@ -342,11 +292,53 @@
             </div>
             <div class="pub-venue">
               <span class="venue-chip is-accepted">NeurIPS 2025</span>
-              <span class="role">Co-1st</span>
             </div>
           </article>
+          <article class="pub" data-cat="dynamic-worlds" id="paper-pros4d">
+            <span class="pub-no">09</span>
+            <a class="pub-thumb" href="https://pros4d.github.io/" tabindex="-1"><img loading="lazy" src="images/Pros4D/Pros4D-teaser.webp" alt="Pros4D teaser showing observed street footage and latent reasoning about how the scene evolves" ></a>
+            <div class="pub-main">
+              <h3 class="pub-title"><a href="https://pros4d.github.io/">Pros4D: Modeling Evolving 4D Worlds in Latent Space for Dynamic Spatial Reasoning</a></h3>
+              <p class="paper-authors">Rongxin Gao, Dongxuan Liu, Chu Li, Chengyang Ji, Jialing Huang, Runyu Chen, Kairun Wen, Chenxin Li, Jingrui Ye, Haosong Zhen, Xinghao Ding†, Yue Huang, <span class="me">Yuzhi Huang†</span>, Xiaotong Tu, Jingyan Jiang</p>
+              <div class="pub-links">
+                <a href="https://pros4d.github.io/">Project Page</a>
+                <a class="arxiv" href="https://arxiv.org/abs/2611.19803">arXiv</a>
+              </div>
+            </div>
+            <div class="pub-venue">
+              <span class="venue-chip">Preprint 2026</span>
+            </div>
+          </article>
+          <article class="pub" data-cat="dynamic-worlds">
+            <span class="pub-no">10</span>
+            <a class="pub-thumb" href="https://zipvggt.github.io/" tabindex="-1"><img loading="lazy" src="images/zipvggt/Zip-VGGT.png" alt="Zip-VGGT project overview" ></a>
+            <div class="pub-main">
+              <h3 class="pub-title"><a href="https://zipvggt.github.io/">Zip-VGGT: Object-Centric Spatiotemporal KV Compression for Streaming Vision Transformers</a></h3>
+              <p class="paper-authors">Kairun Wen†, Runyu Chen, Wenyan Cong, Peiwei Lin, Tao Lu, Lihan Jiang, Weiguang Zhao, Junting Dong, Yunlong Lin, <span class="me">Yuzhi Huang</span>, Xinghao Ding, Hongsheng Li, Linning Xu, Mulin Yu</p>
+              <div class="pub-links">
+                <a href="https://zipvggt.github.io/">Project Page</a>
+                <details>
+                <summary>Abstract</summary>
+                <p class="abstract">Zip-VGGT introduces object-centric spatiotemporal KV compression for streaming vision, preserving geometric topology and dynamic trajectories while controlling long-term memory use.</p>
+                </details>
+              </div>
+            </div>
+            <div class="pub-venue">
+              <span class="venue-chip">Preprint</span>
+            </div>
+          </article>
+        </div>
+      </div>
+      <div class="card pub-group" id="pub-video-anomaly">
+        <div class="pub-group-head">
+          <span class="pub-group-no">Direction 03</span>
+          <h3>Track-Centric Video Anomaly Understanding</h3>
+          <p>Instance tracking, dense localization, and structured anomaly understanding</p>
+          <span class="pub-group-count">2 papers</span>
+        </div>
+        <div class="pubs">
           <article class="pub" data-cat="video-anomaly" data-lead id="paper-tao">
-            <span class="pub-no">12</span>
+            <span class="pub-no">11</span>
             <a class="pub-thumb" href="https://tao-25.github.io/" tabindex="-1"><img loading="lazy" src="images/TAO/TAO.png" alt="Track Any Anomalous Object overview" ></a>
             <div class="pub-main">
               <h3 class="pub-title"><a href="https://tao-25.github.io/">Track Any Anomalous Object: A Granular Video Anomaly Detection Pipeline</a></h3>
@@ -363,9 +355,37 @@
             </div>
             <div class="pub-venue">
               <span class="venue-chip is-accepted">CVPR 2025</span>
-              <span class="role">1st author</span>
             </div>
           </article>
+          <article class="pub" data-cat="video-anomaly">
+            <span class="pub-no">12</span>
+            <a class="pub-thumb" href="https://yarkupa.github.io/tau-bench.github.io/" tabindex="-1"><img loading="lazy" src="images/TAU-Bench/TAU-Bench-overview.png" alt="TAU-Bench overview connecting anomaly instance tracking with fine-grained video anomaly understanding" ></a>
+            <div class="pub-main">
+              <h3 class="pub-title"><a href="https://yarkupa.github.io/tau-bench.github.io/">TAU-Bench: From Anomaly Instance Tracking to Fine-Grained Video Anomaly Understanding</a></h3>
+              <p class="paper-authors">Kepeng Yang*, Dongxuan Liu*, Rongxin Gao*, Zixin Su, Rui Wu, Shuzhao Xie, Chenxin Li, Panwang Pan, <span class="me">Yuzhi Huang†</span>, Yue Huang†, Jingyan Jiang</p>
+              <div class="pub-links">
+                <a href="https://yarkupa.github.io/tau-bench.github.io/">Project Page</a>
+                <a class="arxiv" href="https://arxiv.org/abs/2608.05699">arXiv</a>
+                <details>
+                <summary>Abstract</summary>
+                <p class="abstract">TAU-Bench is a track-centric benchmark for jointly evaluating anomaly instance tracking and fine-grained video anomaly understanding.</p>
+                </details>
+              </div>
+            </div>
+            <div class="pub-venue">
+              <span class="venue-chip">Preprint 2026</span>
+            </div>
+          </article>
+        </div>
+      </div>
+      <div class="card pub-group" id="pub-foundation-model-adaptation">
+        <div class="pub-group-head">
+          <span class="pub-group-no">Direction 04</span>
+          <h3>Segmentation Foundation Model Adaptation</h3>
+          <p>Probabilistic prompting and ambiguity-aware adaptation of vision foundation models</p>
+          <span class="pub-group-count">2 papers</span>
+        </div>
+        <div class="pubs">
           <article class="pub" data-cat="foundation-model-adaptation" data-lead id="paper-asam">
             <span class="pub-no">13</span>
             <a class="pub-thumb" href="https://a-sa-m.github.io/" tabindex="-1"><img loading="lazy" src="images/ASAM/asam.png" alt="ASAM method overview" ></a>
@@ -384,7 +404,6 @@
             </div>
             <div class="pub-venue">
               <span class="venue-chip is-accepted">NeurIPS 2024</span>
-              <span class="role">Co-1st</span>
             </div>
           </article>
           <article class="pub" data-cat="foundation-model-adaptation" data-lead id="paper-p2sam">
@@ -405,10 +424,10 @@
             </div>
             <div class="pub-venue">
               <span class="venue-chip is-accepted">ACM MM 2024</span>
-              <span class="role">1st author</span>
             </div>
           </article>
         </div>
+      </div>
       </div>
     </section>
 

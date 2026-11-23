@@ -110,7 +110,7 @@
 
   // gentle reveal on scroll
   if ("IntersectionObserver" in window && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    const items = $$(".chapter, .about-card, .interest, .table, .news-card, .rows, .list-card");
+    const items = $$(".chapter, .interest, .pub-group, .news-card, .rows, .list-card");
     const io = new IntersectionObserver((entries) => entries.forEach((e) => {
       if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
     }), { rootMargin: "0px 0px -6% 0px" });

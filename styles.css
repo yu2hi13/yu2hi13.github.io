@@ -176,8 +176,7 @@ button { font: inherit; }
 .pub-no { font-family: var(--mono); font-size: 13px; color: var(--muted); text-align: center; padding-top: 4px; }
 .pub-thumb { display: block; border-radius: 8px; overflow: hidden; border: 1px solid var(--line); background: var(--soft); }
 .pub-thumb img, .pub-thumb video { width: 100%; height: 100px; object-fit: cover; transition: transform .4s; }
-.pub-thumb video[controls] { object-fit: contain; background: #111; }
-.pub:hover .pub-thumb img, .pub:hover .pub-thumb video:not([controls]) { transform: scale(1.04); }
+.pub:hover .pub-thumb img, .pub:hover .pub-thumb video { transform: scale(1.04); }
 .pub-title { margin: 0 0 4px; font-size: 15.5px; font-weight: 650; line-height: 1.38; }
 .pub-title a { color: var(--link); }
 .pub-star { color: #d4a12a; margin-right: 5px; }

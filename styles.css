@@ -80,8 +80,8 @@ button { font: inherit; }
 .moon { float: right; position: relative; z-index: 2; width: 104px; height: 104px; margin: -18px -10px 4px 22px; shape-outside: circle(58%); animation: bob 7s ease-in-out infinite; }
 .moon { cursor: pointer; }
 .moon svg { position: relative; z-index: 1; filter: drop-shadow(0 0 14px rgba(214,240,229,.95)) drop-shadow(4px 8px 12px rgba(32,53,66,.18)); }
-.mface .moon-face { transform: translate(calc(var(--lx, 0) * 4px), calc(var(--ly, 0) * 3.4px)); transition: transform .35s cubic-bezier(.3,1.4,.5,1); }
-.mface .moon-pits { transform: translate(calc(var(--lx, 0) * -1.5px), calc(var(--ly, 0) * -1.2px)); transition: transform .35s ease-out; }
+.mface .moon-face { transform: translate(calc(var(--lx, 0) * 4px), calc(var(--ly, 0) * 3.4px)); transition: transform .45s cubic-bezier(.3,1.15,.5,1); }
+.mface .moon-pits { transform: translate(calc(var(--lx, 0) * -2.6px), calc(var(--ly, 0) * -2.2px)); transition: transform .45s cubic-bezier(.3,1.15,.5,1); }
 .mface .moon-eyes { transform: translate(calc(var(--lx, 0) * 2.6px), calc(var(--ly, 0) * 2.6px)); transition: transform .2s ease-out; }
 .mface .eye { transform-box: fill-box; transform-origin: center; animation: blink 4.8s infinite; }
 .mface .eye:nth-child(2) { animation-delay: .04s; }
